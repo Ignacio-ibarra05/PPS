@@ -29,12 +29,12 @@
 
     <label for="races">Razas:</label>
     <select id="races">
-        <option value="">Cargando razas...</option>
+        <option value="">Selecciona una raza</option>
     </select>
 
     <label for="professions">Profesiones:</label>
     <select id="professions">
-        <option value="">Cargando profesiones...</option>
+        <option value="">Selecciona una profesión</option>
     </select>
 
     <button id="show-details">Mostrar detalles</button>
@@ -45,43 +45,78 @@
     </div>
 
     <script>
-        // URLs de la API oficial
-        const racesUrl = "https://api.guildwars2.com/v2/races";
-        const professionsUrl = "https://api.guildwars2.com/v2/professions";
+        // Ruta al archivo JSON
+        const jsonFilePath = "../API/guildwars2_data.json";
 
         // Referencias a elementos del DOM
         const racesSelect = document.getElementById("races");
         const professionsSelect = document.getElementById("professions");
         const resultsDiv = document.getElementById("results");
 
-        // Función para cargar opciones en un select
-        async function loadOptions(url, selectElement) {
+        // Función para cargar datos desde el archivo JSON
+        async function loadData() {
             try {
-                const response = await fetch(url);
+                const response = await fetch(jsonFilePath);
                 const data = await response.json();
-                selectElement.innerHTML = "<option value=''>Selecciona una opción</option>";
-                data.forEach(option => {
+
+                // Cargar razas
+                data.races.forEach(race => {
                     const opt = document.createElement("option");
-                    opt.value = option;
-                    opt.textContent = option;
-                    selectElement.appendChild(opt);
+                    opt.value = race;
+                    opt.textContent = race;
+                    racesSelect.appendChild(opt);
                 });
+
+                // Cargar profesiones
+                data.professions.forEach(profession => {
+                    const opt = document.createElement("option");
+                    opt.value = profession.name;
+                    opt.textContent = profession.name;
+                    professionsSelect.appendChild(opt);
+                });
+
+                // Guardar datos en memoria para detalles
+                window.professionsData = data.professions;
             } catch (error) {
-                console.error("Error cargando opciones:", error);
+                console.error("Error cargando datos:", error);
             }
         }
 
         // Mostrar detalles al hacer clic
         document.getElementById("show-details").addEventListener("click", () => {
             const selectedRace = racesSelect.value;
-            const selectedProfession = professionsSelect.value;
+            const selectedProfessionName = professionsSelect.value;
 
-            if (selectedRace && selectedProfession) {
-                resultsDiv.innerHTML = `
+            if (selectedRace && selectedProfessionName) {
+                const selectedProfession = window.professionsData.find(
+                    prof => prof.name === selectedProfessionName
+                );
+
+                let details = `
                     <h2>Resultados:</h2>
                     <p><strong>Raza:</strong> ${selectedRace}</p>
-                    <p><strong>Profesión:</strong> ${selectedProfession}</p>
+                    <p><strong>Profesión:</strong> ${selectedProfession.name}</p>
+                    <p><strong>Especializaciones:</strong> ${selectedProfession.specializations.join(", ")}</p>
+                    <p><strong>Habilidades:</strong></p>
+                    <ul>
+                        ${selectedProfession.skills
+                            .map(skill => `<li>${skill.name} (${skill.type})</li>`)
+                            .join("")}
+                    </ul>
+                    <p><strong>Equipamiento:</strong></p>
+                    <ul>
+                        ${Object.entries(selectedProfession.equipment)
+                            .map(
+                                ([weapon, details]) =>
+                                    `<li>${weapon}: Habilidades ${details.skills.join(", ")}, Especialización: ${
+                                        details.specialization_required
+                                    }</li>`
+                            )
+                            .join("")}
+                    </ul>
                 `;
+
+                resultsDiv.innerHTML = details;
             } else {
                 resultsDiv.innerHTML = `
                     <h2>Resultados:</h2>
@@ -90,9 +125,8 @@
             }
         });
 
-        // Cargar razas y profesiones al inicio
-        loadOptions(racesUrl, racesSelect);
-        loadOptions(professionsUrl, professionsSelect);
+        // Cargar datos al iniciar
+        loadData();
     </script>
 </body>
 </html>
