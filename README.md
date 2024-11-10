@@ -12,4 +12,4 @@ git clone https://github.com/Ignacio-ibarra05/PPS
 ## Modo de Uso
 
 ### Github pages
-[Ir a GitHub](https://github.com)
+[Prueba de uso]([https://github.com](https://ignacio-ibarra05.github.io/PPS/))
