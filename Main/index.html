@@ -3,130 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guild Wars 2 Selector</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        select, button {
-            margin: 10px 0;
-            padding: 10px;
-            font-size: 16px;
-        }
-        .results {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-    </style>
+    <title>Guild Wars 2 Skill Stats</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Guild Wars 2 Selector</h1>
-    <p>Selecciona una raza y una profesión para ver los detalles:</p>
-
-    <label for="races">Razas:</label>
-    <select id="races">
-        <option value="">Selecciona una raza</option>
-    </select>
-
-    <label for="professions">Profesiones:</label>
-    <select id="professions">
-        <option value="">Selecciona una profesión</option>
-    </select>
-
-    <button id="show-details">Mostrar detalles</button>
-
-    <div class="results" id="results">
-        <h2>Resultados:</h2>
-        <p>Selecciona una raza y una profesión para ver los detalles.</p>
+    <h1>Guild Wars 2 Skill Stats</h1>
+    <div>
+        <label for="race">Raza:</label>
+        <select id="race">
+            <option value="">Selecciona una raza</option>
+        </select>
     </div>
-
-    <script>
-        // Ruta al archivo JSON
-        const jsonFilePath = "../API/guildwars2_data.json";
-
-        // Referencias a elementos del DOM
-        const racesSelect = document.getElementById("races");
-        const professionsSelect = document.getElementById("professions");
-        const resultsDiv = document.getElementById("results");
-
-        // Función para cargar datos desde el archivo JSON
-        async function loadData() {
-            try {
-                const response = await fetch(jsonFilePath);
-                const data = await response.json();
-
-                // Cargar razas
-                data.races.forEach(race => {
-                    const opt = document.createElement("option");
-                    opt.value = race;
-                    opt.textContent = race;
-                    racesSelect.appendChild(opt);
-                });
-
-                // Cargar profesiones
-                data.professions.forEach(profession => {
-                    const opt = document.createElement("option");
-                    opt.value = profession.name;
-                    opt.textContent = profession.name;
-                    professionsSelect.appendChild(opt);
-                });
-
-                // Guardar datos en memoria para detalles
-                window.professionsData = data.professions;
-            } catch (error) {
-                console.error("Error cargando datos:", error);
-            }
-        }
-
-        // Mostrar detalles al hacer clic
-        document.getElementById("show-details").addEventListener("click", () => {
-            const selectedRace = racesSelect.value;
-            const selectedProfessionName = professionsSelect.value;
-
-            if (selectedRace && selectedProfessionName) {
-                const selectedProfession = window.professionsData.find(
-                    prof => prof.name === selectedProfessionName
-                );
-
-                let details = `
-                    <h2>Resultados:</h2>
-                    <p><strong>Raza:</strong> ${selectedRace}</p>
-                    <p><strong>Profesión:</strong> ${selectedProfession.name}</p>
-                    <p><strong>Especializaciones:</strong> ${selectedProfession.specializations.join(", ")}</p>
-                    <p><strong>Habilidades:</strong></p>
-                    <ul>
-                        ${selectedProfession.skills
-                            .map(skill => `<li>${skill.name} (${skill.type})</li>`)
-                            .join("")}
-                    </ul>
-                    <p><strong>Equipamiento:</strong></p>
-                    <ul>
-                        ${Object.entries(selectedProfession.equipment)
-                            .map(
-                                ([weapon, details]) =>
-                                    `<li>${weapon}: Habilidades ${details.skills.join(", ")}, Especialización: ${
-                                        details.specialization_required
-                                    }</li>`
-                            )
-                            .join("")}
-                    </ul>
-                `;
-
-                resultsDiv.innerHTML = details;
-            } else {
-                resultsDiv.innerHTML = `
-                    <h2>Resultados:</h2>
-                    <p>Por favor, selecciona una raza y una profesión.</p>
-                `;
-            }
-        });
-
-        // Cargar datos al iniciar
-        loadData();
-    </script>
+    <div>
+        <label for="profession">Profesión:</label>
+        <select id="profession">
+            <option value="">Selecciona una profesión</option>
+        </select>
+    </div>
+    <div>
+        <label for="specialization">Especialización:</label>
+        <select id="specialization">
+            <option value="">Selecciona una especialización</option>
+        </select>
+    </div>
+    <div>
+        <label for="skill">Habilidad:</label>
+        <select id="skill">
+            <option value="">Selecciona una habilidad</option>
+        </select>
+    </div>
+    <button id="show-stats">Mostrar Estadísticas</button>
+    <div id="results">
+        <h2>Estadísticas de la Habilidad</h2>
+        <p>Selecciona opciones para ver estadísticas.</p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
