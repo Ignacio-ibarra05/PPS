@@ -1,0 +1,3873 @@
+{
+    "races": [
+        "Human",
+        "Asura",
+        "Sylvari",
+        "Charr",
+        "Norn"
+    ],
+    "professions": [
+        {
+            "name": "Guardian",
+            "specializations": [
+                "Zeal",
+                "Radiance",
+                "Valor",
+                "Honor",
+                "Virtues",
+                "Dragonhunter",
+                "Firebrand",
+                "Willbender"
+            ],
+            "skills": [
+                {
+                    "name": 9115,
+                    "type": "Profession"
+                },
+                {
+                    "name": 9118,
+                    "type": "Profession"
+                },
+                {
+                    "name": 9120,
+                    "type": "Profession"
+                },
+                {
+                    "name": 9102,
+                    "type": "Heal"
+                },
+                {
+                    "name": 9158,
+                    "type": "Heal"
+                },
+                {
+                    "name": 9083,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21664,
+                    "type": "Heal"
+                },
+                {
+                    "name": 9125,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9168,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9175,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9182,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9093,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9150,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9151,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9163,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9084,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9085,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9153,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9152,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9251,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9187,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9253,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9128,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9245,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9248,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9247,
+                    "type": "Utility"
+                },
+                {
+                    "name": 9246,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29965,
+                    "type": "Elite"
+                },
+                {
+                    "name": 9154,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30461,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30025,
+                    "type": "Heal"
+                },
+                {
+                    "name": 29786,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30553,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30364,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30871,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30273,
+                    "type": "Elite"
+                },
+                {
+                    "name": 41714,
+                    "type": "Heal"
+                },
+                {
+                    "name": 40915,
+                    "type": "Utility"
+                },
+                {
+                    "name": 46148,
+                    "type": "Utility"
+                },
+                {
+                    "name": 44080,
+                    "type": "Utility"
+                },
+                {
+                    "name": 45460,
+                    "type": "Utility"
+                },
+                {
+                    "name": 43357,
+                    "type": "Elite"
+                },
+                {
+                    "name": 44364,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41780,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42259,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42371,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41380,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62622,
+                    "type": "Heal"
+                },
+                {
+                    "name": 62561,
+                    "type": "Elite"
+                },
+                {
+                    "name": 62608,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62521,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62565,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62549,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62668,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62603,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62648,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Axe": {
+                    "skills": [
+                        45047,
+                        40624,
+                        45402
+                    ],
+                    "specialization_required": 62
+                },
+                "Focus": {
+                    "skills": [
+                        9112,
+                        9082
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Greatsword": {
+                    "skills": [
+                        9137,
+                        9081,
+                        9080,
+                        9146,
+                        9147
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Hammer": {
+                    "skills": [
+                        9159,
+                        9194,
+                        9260,
+                        9124,
+                        9195
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Spear": {
+                    "skills": [
+                        9189,
+                        73055,
+                        9190,
+                        72940,
+                        72978,
+                        9191,
+                        73094,
+                        9192,
+                        73132,
+                        9193
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Longbow": {
+                    "skills": [
+                        30471,
+                        30229,
+                        29630,
+                        29789,
+                        30628
+                    ],
+                    "specialization_required": 27
+                },
+                "Mace": {
+                    "skills": [
+                        9109,
+                        9111,
+                        9086
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Pistol": {
+                    "skills": [
+                        72031,
+                        71968,
+                        71987,
+                        71918,
+                        71817
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Scepter": {
+                    "skills": [
+                        9098,
+                        9090,
+                        9099
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Shield": {
+                    "skills": [
+                        15834,
+                        9087,
+                        9091
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Staff": {
+                    "skills": [
+                        9122,
+                        9140,
+                        9143,
+                        9265,
+                        9144
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Sword": {
+                    "skills": [
+                        9105,
+                        9097,
+                        9107,
+                        62525,
+                        62650
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Torch": {
+                    "skills": [
+                        9104,
+                        9088
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Trident": {
+                    "skills": [
+                        9205,
+                        9207,
+                        9208,
+                        9209,
+                        9206
+                    ],
+                    "specialization_required": "Ninguna"
+                }
+            }
+        },
+        {
+            "name": "Warrior",
+            "specializations": [
+                "Strength",
+                "Arms",
+                "Defense",
+                "Tactics",
+                "Discipline",
+                "Berserker",
+                "Spellbreaker",
+                "Bladesworn"
+            ],
+            "skills": [
+                {
+                    "name": 14443,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14544,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14375,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14367,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14353,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14414,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14506,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14396,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14387,
+                    "type": "Profession"
+                },
+                {
+                    "name": 14402,
+                    "type": "Heal"
+                },
+                {
+                    "name": 14401,
+                    "type": "Heal"
+                },
+                {
+                    "name": 14389,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21815,
+                    "type": "Heal"
+                },
+                {
+                    "name": 14502,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14354,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14516,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14388,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14404,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14410,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14479,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14413,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14403,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14372,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14575,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14409,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14528,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14405,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14407,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14408,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14406,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14392,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14412,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14368,
+                    "type": "Utility"
+                },
+                {
+                    "name": 14419,
+                    "type": "Elite"
+                },
+                {
+                    "name": 14355,
+                    "type": "Elite"
+                },
+                {
+                    "name": 14483,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30435,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30185,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29644,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29679,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30989,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29852,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29923,
+                    "type": "Profession"
+                },
+                {
+                    "name": 31048,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30682,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30851,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30879,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30343,
+                    "type": "Elite"
+                },
+                {
+                    "name": 29941,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30074,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29613,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30258,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30189,
+                    "type": "Heal"
+                },
+                {
+                    "name": 41100,
+                    "type": "Heal"
+                },
+                {
+                    "name": 45333,
+                    "type": "Elite"
+                },
+                {
+                    "name": 45380,
+                    "type": "Utility"
+                },
+                {
+                    "name": 43745,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41919,
+                    "type": "Utility"
+                },
+                {
+                    "name": 43123,
+                    "type": "Utility"
+                },
+                {
+                    "name": 45252,
+                    "type": "Profession"
+                },
+                {
+                    "name": 39972,
+                    "type": "Profession"
+                },
+                {
+                    "name": 46044,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41283,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41543,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43488,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44397,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43566,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42707,
+                    "type": "Profession"
+                },
+                {
+                    "name": 40601,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42803,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41110,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42041,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42494,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41746,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41330,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44165,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62967,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62901,
+                    "type": "Elite"
+                },
+                {
+                    "name": 68085,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62745,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62803,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62804,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62960,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62978,
+                    "type": "Heal"
+                },
+                {
+                    "name": 71932,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72029,
+                    "type": "Profession"
+                },
+                {
+                    "name": 71922,
+                    "type": "Profession"
+                },
+                {
+                    "name": 71950,
+                    "type": "Profession"
+                },
+                {
+                    "name": 71875,
+                    "type": "Profession"
+                },
+                {
+                    "name": 69290,
+                    "type": "Profession"
+                },
+                {
+                    "name": 69297,
+                    "type": "Profession"
+                },
+                {
+                    "name": 73024,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72911,
+                    "type": "Profession"
+                },
+                {
+                    "name": 73042,
+                    "type": "Profession"
+                },
+                {
+                    "name": 73006,
+                    "type": "Profession"
+                },
+                {
+                    "name": 73014,
+                    "type": "Profession"
+                },
+                {
+                    "name": 73103,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72089,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Axe": {
+                    "skills": [
+                        14369,
+                        14421,
+                        14398,
+                        14418,
+                        14399
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Dagger": {
+                    "skills": [
+                        42745,
+                        46233,
+                        44937,
+                        44004,
+                        45160
+                    ],
+                    "specialization_required": 61
+                },
+                "Greatsword": {
+                    "skills": [
+                        14356,
+                        14554,
+                        14447,
+                        14510,
+                        14446
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Hammer": {
+                    "skills": [
+                        14358,
+                        14386,
+                        14482,
+                        14359,
+                        14511
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Spear": {
+                    "skills": [
+                        72958,
+                        14437,
+                        72897,
+                        14440,
+                        72959,
+                        14448,
+                        72992,
+                        14441,
+                        73009,
+                        14480
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Longbow": {
+                    "skills": [
+                        14431,
+                        14519,
+                        14381,
+                        14505,
+                        14504
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Mace": {
+                    "skills": [
+                        14376,
+                        14507,
+                        14503,
+                        14518,
+                        14415
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Pistol": {
+                    "skills": [
+                        62697,
+                        62800
+                    ],
+                    "specialization_required": 68
+                },
+                "Rifle": {
+                    "skills": [
+                        14432,
+                        14416,
+                        14472,
+                        34296,
+                        14360
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Shield": {
+                    "skills": [
+                        14361,
+                        14362
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Speargun": {
+                    "skills": [
+                        14552,
+                        14466,
+                        14481,
+                        14467,
+                        14465
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Staff": {
+                    "skills": [
+                        72024,
+                        72002,
+                        71860,
+                        72026,
+                        71975
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Sword": {
+                    "skills": [
+                        14364,
+                        14366,
+                        14497,
+                        14498,
+                        14400
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Torch": {
+                    "skills": [
+                        29845,
+                        29940
+                    ],
+                    "specialization_required": 18
+                },
+                "Warhorn": {
+                    "skills": [
+                        14393,
+                        14394
+                    ],
+                    "specialization_required": "Ninguna"
+                }
+            }
+        },
+        {
+            "name": "Engineer",
+            "specializations": [
+                "Explosives",
+                "Firearms",
+                "Inventions",
+                "Alchemy",
+                "Tools",
+                "Scrapper",
+                "Holosmith",
+                "Mechanist"
+            ],
+            "skills": [
+                {
+                    "name": 5834,
+                    "type": "Heal"
+                },
+                {
+                    "name": 5802,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21659,
+                    "type": "Heal"
+                },
+                {
+                    "name": 5857,
+                    "type": "Heal"
+                },
+                {
+                    "name": 5818,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5836,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5837,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5838,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5912,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5821,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5862,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5861,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5860,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5968,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5805,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5812,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5927,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5933,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5904,
+                    "type": "Utility"
+                },
+                {
+                    "name": 6161,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5865,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5910,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5811,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5825,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5868,
+                    "type": "Elite"
+                },
+                {
+                    "name": 5832,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30800,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30357,
+                    "type": "Heal"
+                },
+                {
+                    "name": 30101,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29739,
+                    "type": "Utility"
+                },
+                {
+                    "name": 31248,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29921,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30815,
+                    "type": "Elite"
+                },
+                {
+                    "name": 63049,
+                    "type": "Heal"
+                },
+                {
+                    "name": 63095,
+                    "type": "Elite"
+                },
+                {
+                    "name": 63262,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63111,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63050,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63210,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63089,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63253,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63113,
+                    "type": "Utility"
+                },
+                {
+                    "name": 56920,
+                    "type": "Profession"
+                },
+                {
+                    "name": 40507,
+                    "type": "Heal"
+                },
+                {
+                    "name": 42009,
+                    "type": "Elite"
+                },
+                {
+                    "name": 43739,
+                    "type": "Utility"
+                },
+                {
+                    "name": 42842,
+                    "type": "Utility"
+                },
+                {
+                    "name": 44646,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41218,
+                    "type": "Utility"
+                },
+                {
+                    "name": 42938,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72114,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72103,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Hammer": {
+                    "skills": [
+                        30501,
+                        30088,
+                        30665,
+                        29840,
+                        30713
+                    ],
+                    "specialization_required": 43
+                },
+                "Spear": {
+                    "skills": [
+                        72944,
+                        72898,
+                        73002,
+                        72977,
+                        72974
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Mace": {
+                    "skills": [
+                        63186,
+                        63169,
+                        63234
+                    ],
+                    "specialization_required": 70
+                },
+                "Pistol": {
+                    "skills": [
+                        5827,
+                        5828,
+                        5829,
+                        5831,
+                        5830
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Rifle": {
+                    "skills": [
+                        6003,
+                        6153,
+                        6004,
+                        6154,
+                        6005
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Shield": {
+                    "skills": [
+                        6053,
+                        6054
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Shortbow": {
+                    "skills": [
+                        71873,
+                        72052,
+                        71882,
+                        71870,
+                        71888
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Speargun": {
+                    "skills": [
+                        6148,
+                        6147,
+                        50380,
+                        6149,
+                        6145
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Sword": {
+                    "skills": [
+                        43476,
+                        70514,
+                        44110,
+                        71121,
+                        40160,
+                        69565
+                    ],
+                    "specialization_required": 57
+                }
+            }
+        },
+        {
+            "name": "Ranger",
+            "specializations": [
+                "Marksmanship",
+                "Skirmishing",
+                "Wilderness Survival",
+                "Nature Magic",
+                "Beastmastery",
+                "Druid",
+                "Soulbeast",
+                "Untamed"
+            ],
+            "skills": [
+                {
+                    "name": 31914,
+                    "type": "Heal"
+                },
+                {
+                    "name": 12483,
+                    "type": "Heal"
+                },
+                {
+                    "name": 12489,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21773,
+                    "type": "Heal"
+                },
+                {
+                    "name": 12476,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12499,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12496,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12492,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12502,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12542,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12500,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12491,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12537,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12494,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12501,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12550,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12498,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12495,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12497,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12493,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12633,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12631,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12632,
+                    "type": "Utility"
+                },
+                {
+                    "name": 34309,
+                    "type": "Utility"
+                },
+                {
+                    "name": 12516,
+                    "type": "Elite"
+                },
+                {
+                    "name": 12580,
+                    "type": "Elite"
+                },
+                {
+                    "name": 12569,
+                    "type": "Elite"
+                },
+                {
+                    "name": 31407,
+                    "type": "Heal"
+                },
+                {
+                    "name": 31322,
+                    "type": "Utility"
+                },
+                {
+                    "name": 31746,
+                    "type": "Utility"
+                },
+                {
+                    "name": 31582,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30238,
+                    "type": "Utility"
+                },
+                {
+                    "name": 31677,
+                    "type": "Elite"
+                },
+                {
+                    "name": 31869,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45789,
+                    "type": "Utility"
+                },
+                {
+                    "name": 45717,
+                    "type": "Elite"
+                },
+                {
+                    "name": 45142,
+                    "type": "Utility"
+                },
+                {
+                    "name": 44948,
+                    "type": "Heal"
+                },
+                {
+                    "name": 45970,
+                    "type": "Utility"
+                },
+                {
+                    "name": 40498,
+                    "type": "Utility"
+                },
+                {
+                    "name": 44991,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42042,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43136,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43060,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43726,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42894,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43068,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41461,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41537,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41575,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41524,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45743,
+                    "type": "Profession"
+                },
+                {
+                    "name": 40625,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44514,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44384,
+                    "type": "Profession"
+                },
+                {
+                    "name": 40111,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44617,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43548,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41406,
+                    "type": "Profession"
+                },
+                {
+                    "name": 46432,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43788,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43701,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44097,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43671,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42717,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44885,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43186,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41837,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42797,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44360,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41206,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45479,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42907,
+                    "type": "Profession"
+                },
+                {
+                    "name": 40255,
+                    "type": "Profession"
+                },
+                {
+                    "name": 46386,
+                    "type": "Profession"
+                },
+                {
+                    "name": 41908,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44626,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45797,
+                    "type": "Profession"
+                },
+                {
+                    "name": 40588,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43375,
+                    "type": "Profession"
+                },
+                {
+                    "name": 40729,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42809,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42944,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43014,
+                    "type": "Profession"
+                },
+                {
+                    "name": 59554,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63319,
+                    "type": "Heal"
+                },
+                {
+                    "name": 63163,
+                    "type": "Elite"
+                },
+                {
+                    "name": 63157,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63256,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63195,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63130,
+                    "type": "Utility"
+                },
+                {
+                    "name": 67382,
+                    "type": "Profession"
+                },
+                {
+                    "name": 64038,
+                    "type": "Profession"
+                },
+                {
+                    "name": 64882,
+                    "type": "Profession"
+                },
+                {
+                    "name": 64699,
+                    "type": "Profession"
+                },
+                {
+                    "name": 66258,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63147,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63344,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63209,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63258,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63094,
+                    "type": "Profession"
+                },
+                {
+                    "name": 71282,
+                    "type": "Profession"
+                },
+                {
+                    "name": 70889,
+                    "type": "Profession"
+                },
+                {
+                    "name": 71499,
+                    "type": "Profession"
+                },
+                {
+                    "name": 71546,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72851,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72636,
+                    "type": "Profession"
+                },
+                {
+                    "name": 73733,
+                    "type": "Profession"
+                },
+                {
+                    "name": 73938,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Axe": {
+                    "skills": [
+                        12466,
+                        12480,
+                        12490,
+                        12638,
+                        12639
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Dagger": {
+                    "skills": [
+                        45426,
+                        43536,
+                        46123,
+                        12478,
+                        12477
+                    ],
+                    "specialization_required": 55
+                },
+                "Greatsword": {
+                    "skills": [
+                        12474,
+                        12525,
+                        12521,
+                        12522,
+                        12475
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Hammer": {
+                    "skills": [
+                        63118,
+                        69167,
+                        69262,
+                        69340,
+                        69212
+                    ],
+                    "specialization_required": 72
+                },
+                "Spear": {
+                    "skills": [
+                        72922,
+                        12553,
+                        73110,
+                        12559,
+                        72928,
+                        12557,
+                        73020,
+                        12561,
+                        73008,
+                        12552
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Longbow": {
+                    "skills": [
+                        12510,
+                        12509,
+                        12573,
+                        12511,
+                        12469
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Mace": {
+                    "skills": [
+                        72088,
+                        71999,
+                        71963,
+                        71903,
+                        71841
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Shortbow": {
+                    "skills": [
+                        12470,
+                        12468,
+                        12517,
+                        12507,
+                        12508
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Speargun": {
+                    "skills": [
+                        12526,
+                        12529,
+                        12528,
+                        12527,
+                        12530
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Staff": {
+                    "skills": [
+                        31710,
+                        31889,
+                        31535,
+                        31700,
+                        31496
+                    ],
+                    "specialization_required": 5
+                },
+                "Sword": {
+                    "skills": [
+                        12471,
+                        69203,
+                        12482
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Torch": {
+                    "skills": [
+                        12635,
+                        12504
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Warhorn": {
+                    "skills": [
+                        12620,
+                        12621
+                    ],
+                    "specialization_required": "Ninguna"
+                }
+            }
+        },
+        {
+            "name": "Thief",
+            "specializations": [
+                "Deadly Arts",
+                "Critical Strikes",
+                "Shadow Arts",
+                "Acrobatics",
+                "Trickery",
+                "Daredevil",
+                "Deadeye",
+                "Specter"
+            ],
+            "skills": [
+                {
+                    "name": 13014,
+                    "type": "Profession"
+                },
+                {
+                    "name": 13027,
+                    "type": "Heal"
+                },
+                {
+                    "name": 13021,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21778,
+                    "type": "Heal"
+                },
+                {
+                    "name": 13050,
+                    "type": "Heal"
+                },
+                {
+                    "name": 13037,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13055,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13096,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13093,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13057,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13026,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13038,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13056,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13046,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13064,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13062,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13060,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13020,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13035,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13066,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13028,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13002,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13044,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13065,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13117,
+                    "type": "Utility"
+                },
+                {
+                    "name": 13082,
+                    "type": "Elite"
+                },
+                {
+                    "name": 13132,
+                    "type": "Elite"
+                },
+                {
+                    "name": 13085,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30400,
+                    "type": "Heal"
+                },
+                {
+                    "name": 30868,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30568,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30661,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30369,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29516,
+                    "type": "Elite"
+                },
+                {
+                    "name": 45088,
+                    "type": "Heal"
+                },
+                {
+                    "name": 45508,
+                    "type": "Elite"
+                },
+                {
+                    "name": 46335,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41205,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41372,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41158,
+                    "type": "Utility"
+                },
+                {
+                    "name": 43390,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63292,
+                    "type": "Heal"
+                },
+                {
+                    "name": 63275,
+                    "type": "Elite"
+                },
+                {
+                    "name": 63323,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63294,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63230,
+                    "type": "Utility"
+                },
+                {
+                    "name": 63276,
+                    "type": "Utility"
+                },
+                {
+                    "name": 1131,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1118,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1162,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1167,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1115,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45094,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1110,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45094,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1110,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1139,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1125,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1148,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1148,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1129,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1129,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1123,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1123,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1141,
+                    "type": "Profession"
+                },
+                {
+                    "name": 1141,
+                    "type": "Profession"
+                },
+                {
+                    "name": 31438,
+                    "type": "Profession"
+                },
+                {
+                    "name": 31438,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Axe": {
+                    "skills": [
+                        71967,
+                        71852,
+                        71965,
+                        71864,
+                        71895
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Dagger": {
+                    "skills": [
+                        13004,
+                        13097,
+                        13006,
+                        13040,
+                        13110,
+                        13019,
+                        16432
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Spear": {
+                    "skills": [
+                        73145,
+                        13119,
+                        73041,
+                        13069,
+                        72986,
+                        13122,
+                        72927,
+                        13070,
+                        72991,
+                        13068
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Pistol": {
+                    "skills": [
+                        13084,
+                        13008,
+                        13011,
+                        13010,
+                        13111,
+                        13012,
+                        13113
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Rifle": {
+                    "skills": [
+                        41422,
+                        41494,
+                        43916,
+                        41937,
+                        40600
+                    ],
+                    "specialization_required": 58
+                },
+                "Scepter": {
+                    "skills": [
+                        63066,
+                        63351,
+                        63254,
+                        63267,
+                        63154
+                    ],
+                    "specialization_required": 71
+                },
+                "Shortbow": {
+                    "skills": [
+                        13022,
+                        13041,
+                        13083,
+                        13024,
+                        13025
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Speargun": {
+                    "skills": [
+                        13072,
+                        13073,
+                        13074,
+                        13075,
+                        13076
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Staff": {
+                    "skills": [
+                        30614,
+                        29911,
+                        30520,
+                        30775,
+                        30597
+                    ],
+                    "specialization_required": 7
+                },
+                "Sword": {
+                    "skills": [
+                        13009,
+                        13015,
+                        13016,
+                        13031,
+                        13112
+                    ],
+                    "specialization_required": "Ninguna"
+                }
+            }
+        },
+        {
+            "name": "Elementalist",
+            "specializations": [
+                "Fire",
+                "Air",
+                "Earth",
+                "Water",
+                "Arcane",
+                "Tempest",
+                "Weaver",
+                "Catalyst"
+            ],
+            "skills": [
+                {
+                    "name": 5494,
+                    "type": "Profession"
+                },
+                {
+                    "name": 5495,
+                    "type": "Profession"
+                },
+                {
+                    "name": 5492,
+                    "type": "Profession"
+                },
+                {
+                    "name": 5493,
+                    "type": "Profession"
+                },
+                {
+                    "name": 5569,
+                    "type": "Heal"
+                },
+                {
+                    "name": 5507,
+                    "type": "Heal"
+                },
+                {
+                    "name": 5503,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21656,
+                    "type": "Heal"
+                },
+                {
+                    "name": 5638,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5641,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5635,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5539,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5506,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5734,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5502,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5573,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5542,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5570,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5572,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5571,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5535,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5554,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5536,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5639,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5540,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5567,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5624,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5546,
+                    "type": "Utility"
+                },
+                {
+                    "name": 5666,
+                    "type": "Elite"
+                },
+                {
+                    "name": 5516,
+                    "type": "Elite"
+                },
+                {
+                    "name": 5534,
+                    "type": "Elite"
+                },
+                {
+                    "name": 29535,
+                    "type": "Heal"
+                },
+                {
+                    "name": 30662,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29948,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30047,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30432,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29968,
+                    "type": "Elite"
+                },
+                {
+                    "name": 44239,
+                    "type": "Heal"
+                },
+                {
+                    "name": 43638,
+                    "type": "Elite"
+                },
+                {
+                    "name": 44926,
+                    "type": "Utility"
+                },
+                {
+                    "name": 44612,
+                    "type": "Utility"
+                },
+                {
+                    "name": 45746,
+                    "type": "Utility"
+                },
+                {
+                    "name": 40183,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62827,
+                    "type": "Heal"
+                },
+                {
+                    "name": 62725,
+                    "type": "Elite"
+                },
+                {
+                    "name": 62965,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62698,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62982,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62826,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62940,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63439,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63459,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62813,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63458,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63396,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62723,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63416,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63461,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62837,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63454,
+                    "type": "Profession"
+                },
+                {
+                    "name": 63472,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Dagger": {
+                    "skills": [
+                        15718,
+                        15716,
+                        5489,
+                        15717,
+                        5496,
+                        5537,
+                        5646,
+                        5525,
+                        40963,
+                        46018,
+                        46140,
+                        42379,
+                        44652,
+                        42330,
+                        5644,
+                        5487,
+                        5527,
+                        5559,
+                        5520,
+                        5691,
+                        5529,
+                        5690,
+                        5557,
+                        5558,
+                        5687,
+                        5522
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Focus": {
+                    "skills": [
+                        5497,
+                        5556,
+                        5530,
+                        5555,
+                        5678,
+                        5490,
+                        5562,
+                        5521
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Hammer": {
+                    "skills": [
+                        62925,
+                        62865,
+                        62747,
+                        62683,
+                        62884,
+                        62958,
+                        62812,
+                        62976,
+                        69246,
+                        69246,
+                        69413,
+                        69413,
+                        69211,
+                        69211,
+                        69164,
+                        69164,
+                        69341,
+                        69341,
+                        69184,
+                        69184,
+                        62758,
+                        62834,
+                        62887,
+                        62975,
+                        62807,
+                        62948,
+                        62947,
+                        62992,
+                        62910,
+                        62843,
+                        62716,
+                        62778
+                    ],
+                    "specialization_required": 67
+                },
+                "Spear": {
+                    "skills": [
+                        73088,
+                        72966,
+                        73124,
+                        72910,
+                        73080,
+                        73061,
+                        73091,
+                        72905,
+                        72906,
+                        73062,
+                        73052,
+                        72914,
+                        73104,
+                        72916,
+                        73137,
+                        72967,
+                        73037,
+                        73019,
+                        72988,
+                        73148,
+                        72998,
+                        73010,
+                        73054,
+                        72982,
+                        72915,
+                        72900
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Pistol": {
+                    "skills": [
+                        71929,
+                        72033,
+                        71904,
+                        71893,
+                        71828,
+                        72028,
+                        71966,
+                        72032,
+                        71863,
+                        71898,
+                        71993,
+                        71960,
+                        72062,
+                        72023,
+                        71940,
+                        71935,
+                        71857,
+                        71842
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Scepter": {
+                    "skills": [
+                        5508,
+                        5693,
+                        5526,
+                        5500,
+                        5692,
+                        5538,
+                        5561,
+                        5695,
+                        40794,
+                        46014,
+                        45742,
+                        42954,
+                        43576,
+                        42181,
+                        5675,
+                        5510,
+                        5694,
+                        5696
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Staff": {
+                    "skills": [
+                        5491,
+                        5549,
+                        5518,
+                        5519,
+                        5548,
+                        5550,
+                        5552,
+                        5528,
+                        42321,
+                        44550,
+                        41184,
+                        43762,
+                        41125,
+                        40332,
+                        5679,
+                        5681,
+                        5553,
+                        5685,
+                        5680,
+                        5515,
+                        5682,
+                        5683,
+                        5501,
+                        5551,
+                        5671,
+                        5686
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Sword": {
+                    "skills": [
+                        39964,
+                        41052,
+                        44681,
+                        43616,
+                        45313,
+                        44405,
+                        44998,
+                        40709,
+                        42271,
+                        43074,
+                        46447,
+                        42867,
+                        40170,
+                        46295,
+                        44451,
+                        41167,
+                        43803,
+                        40139
+                    ],
+                    "specialization_required": 56
+                },
+                "Trident": {
+                    "skills": [
+                        5598,
+                        5604,
+                        5656,
+                        5657,
+                        5597,
+                        5605,
+                        5655,
+                        5658,
+                        40378,
+                        41712,
+                        46185,
+                        46360,
+                        41001,
+                        39981,
+                        5566,
+                        5606,
+                        5652,
+                        5662,
+                        5599,
+                        5748,
+                        5648,
+                        5659,
+                        5600,
+                        5607,
+                        5650,
+                        5661
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Warhorn": {
+                    "skills": [
+                        29548,
+                        30864,
+                        30008,
+                        29453,
+                        29533,
+                        30446,
+                        30795,
+                        30336
+                    ],
+                    "specialization_required": 48
+                }
+            }
+        },
+        {
+            "name": "Mesmer",
+            "specializations": [
+                "Domination",
+                "Dueling",
+                "Chaos",
+                "Inspiration",
+                "Illusions",
+                "Chronomancer",
+                "Mirage",
+                "Virtuoso"
+            ],
+            "skills": [
+                {
+                    "name": 10192,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10287,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10190,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10191,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10176,
+                    "type": "Heal"
+                },
+                {
+                    "name": 10177,
+                    "type": "Heal"
+                },
+                {
+                    "name": 10213,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21750,
+                    "type": "Heal"
+                },
+                {
+                    "name": 10236,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10232,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10234,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10247,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10211,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10204,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10207,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10237,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10200,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10185,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10244,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29578,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10201,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10202,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10341,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10267,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10203,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10302,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10197,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10187,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29519,
+                    "type": "Elite"
+                },
+                {
+                    "name": 10311,
+                    "type": "Elite"
+                },
+                {
+                    "name": 10245,
+                    "type": "Elite"
+                },
+                {
+                    "name": 56930,
+                    "type": "Profession"
+                },
+                {
+                    "name": 56928,
+                    "type": "Profession"
+                },
+                {
+                    "name": 56873,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29830,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30359,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30305,
+                    "type": "Heal"
+                },
+                {
+                    "name": 29526,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30525,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29856,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30814,
+                    "type": "Utility"
+                },
+                {
+                    "name": 40200,
+                    "type": "Heal"
+                },
+                {
+                    "name": 45449,
+                    "type": "Elite"
+                },
+                {
+                    "name": 45046,
+                    "type": "Utility"
+                },
+                {
+                    "name": 42851,
+                    "type": "Utility"
+                },
+                {
+                    "name": 43064,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41065,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62522,
+                    "type": "Heal"
+                },
+                {
+                    "name": 62573,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62617,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62616,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62602,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62597,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45425,
+                    "type": "Utility"
+                },
+                {
+                    "name": 43343,
+                    "type": "Utility"
+                },
+                {
+                    "name": 24755,
+                    "type": "Elite"
+                },
+                {
+                    "name": 35637,
+                    "type": "Utility"
+                },
+                {
+                    "name": 68273,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Axe": {
+                    "skills": [
+                        44791,
+                        69344,
+                        45243,
+                        69385,
+                        43761
+                    ],
+                    "specialization_required": 59
+                },
+                "Dagger": {
+                    "skills": [
+                        62510,
+                        62560,
+                        69311,
+                        62607
+                    ],
+                    "specialization_required": 66
+                },
+                "Focus": {
+                    "skills": [
+                        10186,
+                        10282
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Greatsword": {
+                    "skills": [
+                        10219,
+                        10333,
+                        10218,
+                        10221,
+                        10220
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Spear": {
+                    "skills": [
+                        73154,
+                        10315,
+                        73093,
+                        10318,
+                        73152,
+                        10251,
+                        72946,
+                        10325,
+                        72957,
+                        10255
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Pistol": {
+                    "skills": [
+                        10175,
+                        10229
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Rifle": {
+                    "skills": [
+                        71892,
+                        71897,
+                        72005,
+                        72007,
+                        72008
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Scepter": {
+                    "skills": [
+                        10289,
+                        10276,
+                        10168
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Shield": {
+                    "skills": [
+                        30769,
+                        30643
+                    ],
+                    "specialization_required": 40
+                },
+                "Staff": {
+                    "skills": [
+                        10273,
+                        10310,
+                        10216,
+                        10331,
+                        10169
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Sword": {
+                    "skills": [
+                        10334,
+                        62568,
+                        10173,
+                        10170,
+                        10280,
+                        10174
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Torch": {
+                    "skills": [
+                        10285,
+                        10189
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Trident": {
+                    "skills": [
+                        10258,
+                        10259,
+                        10327,
+                        10328,
+                        10260
+                    ],
+                    "specialization_required": "Ninguna"
+                }
+            }
+        },
+        {
+            "name": "Necromancer",
+            "specializations": [
+                "Spite",
+                "Curses",
+                "Death Magic",
+                "Blood Magic",
+                "Soul Reaping",
+                "Reaper",
+                "Scourge",
+                "Harbinger"
+            ],
+            "skills": [
+                {
+                    "name": 10547,
+                    "type": "Heal"
+                },
+                {
+                    "name": 10548,
+                    "type": "Heal"
+                },
+                {
+                    "name": 10527,
+                    "type": "Heal"
+                },
+                {
+                    "name": 21762,
+                    "type": "Heal"
+                },
+                {
+                    "name": 10546,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10545,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10609,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10607,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10541,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10533,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10589,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10543,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10622,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10612,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10562,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10611,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10583,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10620,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10608,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10685,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10689,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10606,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10602,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10544,
+                    "type": "Utility"
+                },
+                {
+                    "name": 10574,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10554,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10690,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10549,
+                    "type": "Elite"
+                },
+                {
+                    "name": 10646,
+                    "type": "Elite"
+                },
+                {
+                    "name": 10550,
+                    "type": "Elite"
+                },
+                {
+                    "name": 30792,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29442,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29458,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30278,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30825,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29958,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30504,
+                    "type": "Profession"
+                },
+                {
+                    "name": 30557,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29414,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30670,
+                    "type": "Utility"
+                },
+                {
+                    "name": 29666,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30772,
+                    "type": "Utility"
+                },
+                {
+                    "name": 30488,
+                    "type": "Heal"
+                },
+                {
+                    "name": 30105,
+                    "type": "Elite"
+                },
+                {
+                    "name": 43148,
+                    "type": "Heal"
+                },
+                {
+                    "name": 42355,
+                    "type": "Elite"
+                },
+                {
+                    "name": 40274,
+                    "type": "Utility"
+                },
+                {
+                    "name": 42935,
+                    "type": "Utility"
+                },
+                {
+                    "name": 42917,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41615,
+                    "type": "Utility"
+                },
+                {
+                    "name": 40813,
+                    "type": "Profession"
+                },
+                {
+                    "name": 43448,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44428,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44663,
+                    "type": "Profession"
+                },
+                {
+                    "name": 44946,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42297,
+                    "type": "Profession"
+                },
+                {
+                    "name": 46474,
+                    "type": "Profession"
+                },
+                {
+                    "name": 46473,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62567,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62667,
+                    "type": "Heal"
+                },
+                {
+                    "name": 62655,
+                    "type": "Elite"
+                },
+                {
+                    "name": 62530,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62646,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62514,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62662,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62611,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62621,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62672,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62539,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62563,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10644,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10645,
+                    "type": "Profession"
+                },
+                {
+                    "name": 10643,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Axe": {
+                    "skills": [
+                        10561,
+                        10528,
+                        10701
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Dagger": {
+                    "skills": [
+                        10702,
+                        69302,
+                        10529,
+                        10705,
+                        10706
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Focus": {
+                    "skills": [
+                        55050,
+                        10555
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Greatsword": {
+                    "skills": [
+                        29705,
+                        30163,
+                        30860,
+                        29855,
+                        29740
+                    ],
+                    "specialization_required": 34
+                },
+                "Spear": {
+                    "skills": [
+                        73012,
+                        10692,
+                        73068,
+                        10694,
+                        73013,
+                        10619,
+                        73107,
+                        10695,
+                        73007,
+                        10616
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Pistol": {
+                    "skills": [
+                        62517,
+                        62513,
+                        62511
+                    ],
+                    "specialization_required": 64
+                },
+                "Scepter": {
+                    "skills": [
+                        10698,
+                        10532,
+                        10709
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Staff": {
+                    "skills": [
+                        10596,
+                        19117,
+                        10605,
+                        19116,
+                        19115
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Sword": {
+                    "skills": [
+                        71986,
+                        71883,
+                        71799,
+                        71813,
+                        71998
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Torch": {
+                    "skills": [
+                        45846,
+                        44296
+                    ],
+                    "specialization_required": 60
+                },
+                "Trident": {
+                    "skills": [
+                        10623,
+                        10624,
+                        10625,
+                        10628,
+                        10629
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Warhorn": {
+                    "skills": [
+                        10556,
+                        10557
+                    ],
+                    "specialization_required": "Ninguna"
+                }
+            }
+        },
+        {
+            "name": "Revenant",
+            "specializations": [
+                "Corruption",
+                "Retribution",
+                "Salvation",
+                "Invocation",
+                "Devastation",
+                "Herald",
+                "Renegade",
+                "Vindicator"
+            ],
+            "skills": [
+                {
+                    "name": 28419,
+                    "type": "Profession"
+                },
+                {
+                    "name": 27372,
+                    "type": "Heal"
+                },
+                {
+                    "name": 28516,
+                    "type": "Utility"
+                },
+                {
+                    "name": 26679,
+                    "type": "Utility"
+                },
+                {
+                    "name": 26557,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27975,
+                    "type": "Elite"
+                },
+                {
+                    "name": 28494,
+                    "type": "Profession"
+                },
+                {
+                    "name": 55029,
+                    "type": "Profession"
+                },
+                {
+                    "name": 28219,
+                    "type": "Heal"
+                },
+                {
+                    "name": 27322,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27505,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27917,
+                    "type": "Utility"
+                },
+                {
+                    "name": 28287,
+                    "type": "Elite"
+                },
+                {
+                    "name": 28427,
+                    "type": "Heal"
+                },
+                {
+                    "name": 28195,
+                    "type": "Profession"
+                },
+                {
+                    "name": 29148,
+                    "type": "Heal"
+                },
+                {
+                    "name": 26821,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27025,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27715,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27356,
+                    "type": "Elite"
+                },
+                {
+                    "name": 28134,
+                    "type": "Profession"
+                },
+                {
+                    "name": 26937,
+                    "type": "Heal"
+                },
+                {
+                    "name": 29209,
+                    "type": "Utility"
+                },
+                {
+                    "name": 28231,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27107,
+                    "type": "Utility"
+                },
+                {
+                    "name": 28406,
+                    "type": "Elite"
+                },
+                {
+                    "name": 28085,
+                    "type": "Profession"
+                },
+                {
+                    "name": 27220,
+                    "type": "Heal"
+                },
+                {
+                    "name": 28379,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27014,
+                    "type": "Utility"
+                },
+                {
+                    "name": 26644,
+                    "type": "Utility"
+                },
+                {
+                    "name": 27760,
+                    "type": "Elite"
+                },
+                {
+                    "name": 29371,
+                    "type": "Profession"
+                },
+                {
+                    "name": 46409,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62891,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45686,
+                    "type": "Heal"
+                },
+                {
+                    "name": 42949,
+                    "type": "Utility"
+                },
+                {
+                    "name": 40485,
+                    "type": "Utility"
+                },
+                {
+                    "name": 41220,
+                    "type": "Utility"
+                },
+                {
+                    "name": 45773,
+                    "type": "Elite"
+                },
+                {
+                    "name": 44076,
+                    "type": "Profession"
+                },
+                {
+                    "name": 42836,
+                    "type": "Profession"
+                },
+                {
+                    "name": 45537,
+                    "type": "Profession"
+                },
+                {
+                    "name": 51675,
+                    "type": "Profession"
+                },
+                {
+                    "name": 51714,
+                    "type": "Profession"
+                },
+                {
+                    "name": 51713,
+                    "type": "Profession"
+                },
+                {
+                    "name": 51696,
+                    "type": "Profession"
+                },
+                {
+                    "name": 51667,
+                    "type": "Profession"
+                },
+                {
+                    "name": 62719,
+                    "type": "Heal"
+                },
+                {
+                    "name": 62942,
+                    "type": "Elite"
+                },
+                {
+                    "name": 62832,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62962,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62878,
+                    "type": "Utility"
+                },
+                {
+                    "name": 62757,
+                    "type": "Profession"
+                },
+                {
+                    "name": 72058,
+                    "type": "Profession"
+                }
+            ],
+            "equipment": {
+                "Axe": {
+                    "skills": [
+                        28029,
+                        28409
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Greatsword": {
+                    "skills": [
+                        62913,
+                        62692,
+                        62895,
+                        62921,
+                        62929
+                    ],
+                    "specialization_required": 69
+                },
+                "Hammer": {
+                    "skills": [
+                        28549,
+                        28253,
+                        27976,
+                        27665,
+                        28110
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Spear": {
+                    "skills": [
+                        73015,
+                        28714,
+                        72972,
+                        28915,
+                        72938,
+                        28827,
+                        72954,
+                        28692,
+                        73059,
+                        28930
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Mace": {
+                    "skills": [
+                        27066,
+                        28357,
+                        27964
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Scepter": {
+                    "skills": [
+                        71933,
+                        71816,
+                        71952
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Shield": {
+                    "skills": [
+                        29386,
+                        28262
+                    ],
+                    "specialization_required": 52
+                },
+                "Shortbow": {
+                    "skills": [
+                        40497,
+                        40175,
+                        41829,
+                        43993,
+                        41820
+                    ],
+                    "specialization_required": 63
+                },
+                "Staff": {
+                    "skills": [
+                        29180,
+                        29145,
+                        29288,
+                        29321,
+                        28978
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Sword": {
+                    "skills": [
+                        29057,
+                        29233,
+                        26699,
+                        28472,
+                        28571,
+                        27074
+                    ],
+                    "specialization_required": "Ninguna"
+                },
+                "Trident": {
+                    "skills": [
+                        50395,
+                        50456,
+                        50390,
+                        50410,
+                        50483
+                    ],
+                    "specialization_required": "Ninguna"
+                }
+            }
+        }
+    ]
+}
