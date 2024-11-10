@@ -4,12 +4,15 @@ Repositorio destinado al proyecto del curso de Grafos y Algoritmos
 # Optimización de una build en GW2: Grafos y Algoritmos 2024
 ## Instalación
 
-BLABLABLABLABLABLABLABLABLABLABLABLA
+### main.py
+Este codigo crea un grafo por profesion mostrando las especializaciones y a su vez los rasgos asociados. 
+
+Para usar este codigo, primero se debe ejecutar los siguientes comandos:
+
 ```bash
-git clone https://github.com/Ignacio-ibarra05/PPS
+ pip install requests
+ pip install networkx
+ pip install matplotlib
 ```
 
 ## Modo de Uso
-
-### Github pages
-[Prueba de uso](https://ignacio-ibarra05.github.io/PPS/)
