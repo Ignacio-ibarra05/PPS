@@ -10,3 +10,6 @@ git clone https://github.com/Ignacio-ibarra05/PPS
 ```
 
 ## Modo de Uso
+
+### Github pages
+[Ir a GitHub](https://github.com)
