@@ -15,10 +15,7 @@ Para usar este codigo, primero se debe ejecutar los siguientes comandos:
  pip install matplotlib
  pip install flask
 ```
-
-## Modo de Uso
+Con todo instalado, procedemos a hacer funcionar el codigo con el comando:
 ```bash
 python app.py
 ```
-
-
