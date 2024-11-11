@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración Óptima</title>
+</head>
+<body>
+    <h1>Configuración Óptima - Guild Wars 2</h1>
+    <form method="POST">
+        <label for="profesion">Selecciona una profesión:</label>
+        <select name="profesion" id="profesion" required onchange="this.form.submit()">
+            <option value="">-- Selecciona una opción --</option>
+            {% for profesion in profesiones %}
+                <option value="{{ profesion }}" {% if profesion == request.form.profesion %}selected{% endif %}>
+                    {{ profesion }}
+                </option>
+            {% endfor %}
+        </select>
+
+        {% if especializaciones %}
+            <label for="especializacion">Selecciona una especialización:</label>
+            <select name="especializacion" id="especializacion" required>
+                <option value="">-- Selecciona una opción --</option>
+                {% for especializacion in especializaciones %}
+                    <option value="{{ especializacion.id }}">{{ especializacion.name }}</option>
+                {% endfor %}
+            </select>
+        {% endif %}
+
+        <button type="submit">Calcular Configuración</button>
+    </form>
+
+    {% if configuracion_optima %}
+        <h2>Resultado Óptimo</h2>
+        <p><strong>Especialización:</strong> {{ configuracion_optima.especializacion }}</p>
+        <p><strong>DPS Total:</strong> {{ configuracion_optima.dps }}</p>
+        <p><strong>Quickness Total:</strong> {{ configuracion_optima.quickness }}</p>
+        <p><strong>Alacrity Total:</strong> {{ configuracion_optima.alacrity }}</p>
+
+        <h3>Habilidades Óptimas</h3>
+        <ul>
+            {% for habilidad in configuracion_optima.habilidades_optimas %}
+                <li>
+                    {{ habilidad.name }} - DPS: {{ habilidad.dps }}, Quickness: {{ habilidad.quickness }}, Alacrity: {{ habilidad.alacrity }}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Equipamiento Óptimo</h3>
+        <p><strong>Arma:</strong> {{ configuracion_optima.equipamiento_optimo.arma }}</p>
+        <p><strong>Runas:</strong> {{ configuracion_optima.equipamiento_optimo.runas }}</p>
+    {% endif %}
+</body>
+</html>
