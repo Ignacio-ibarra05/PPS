@@ -13,6 +13,12 @@ Para usar este codigo, primero se debe ejecutar los siguientes comandos:
  pip install requests
  pip install networkx
  pip install matplotlib
+ pip install flask
 ```
 
 ## Modo de Uso
+```bash
+python app.py
+```
+
+
