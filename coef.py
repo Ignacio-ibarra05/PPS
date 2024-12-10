@@ -1,6 +1,8 @@
 import requests
 from functools import reduce
 
+API_BASE_URL = "https://api.guildwars2.com/v2"
+
 def get_data(url):
     response = requests.get(url)
     if response.status_code == 200:
@@ -8,6 +10,12 @@ def get_data(url):
     else:
         print(f'Error en la API: {response.status_code}')
         return None
+
+def get_data_API(endpoint):
+    response = requests.get(f"{API_BASE_URL}/{endpoint}")
+    if response.status_code == 200:
+        return response.json()
+    return []
 
 Power = 0
 Power2 = 0
@@ -90,19 +98,37 @@ for i in condition_data:
 
 totalDps += powerDPSWithoutLifesteal
 
-id_counts = {}
+
 
 print(totalDps)
+print('\n')
+print(str(data.keys()))
+print('\n')
 
-print(str(data.keys())+'\n')
 
+print(data['players'][0]['rotation'][0])
+print('\n')
 
+coef_dmg = 0
 
-# print(data['players'][0]['totalDamageDist'][0][0])
-# for i in data['players'][0]['totalDamageDist']:
-#     for j in i:
-#         id_counts[j['id']] += 1
-#     else:
-#         id_counts[j['id']] = 1
-# 
-# print(id_counts)
+for skill in data['players'][0]['rotation']:
+    id = skill['id']
+    print(f'Skill id: { id }')
+    skill_hits = len(skill['skills'])
+    print(f'Skill hits: { skill_hits }')
+
+    skillAPIData = get_data_API(f'skills/{id}')
+    if isinstance(skillAPIData, dict) and 'facts' in skillAPIData:
+        damage_facts = [fact for fact in skillAPIData['facts'] if fact.get('type') == 'Damage']
+        dmg_m = 0
+        if damage_facts:
+            for d in damage_facts:
+                if d['dmg_multiplier'] > dmg_m:
+                    dmg_m = d['dmg_multiplier']*d['hit_count']
+        print(f'Damage modifier { dmg_m }')
+    coef_dmg += skill_hits*dmg_m
+    print('\n')
+
+coef_dmg = coef_dmg*1000/duration
+print(coef_dmg)
+
