@@ -90,4 +90,19 @@ for i in condition_data:
 
 totalDps += powerDPSWithoutLifesteal
 
+id_counts = {}
+
 print(totalDps)
+
+print(str(data.keys())+'\n')
+
+
+
+# print(data['players'][0]['totalDamageDist'][0][0])
+# for i in data['players'][0]['totalDamageDist']:
+#     for j in i:
+#         id_counts[j['id']] += 1
+#     else:
+#         id_counts[j['id']] = 1
+# 
+# print(id_counts)
