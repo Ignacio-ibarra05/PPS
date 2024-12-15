@@ -3,53 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuración Óptima</title>
+    <title>Build Optimizer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Configuración Óptima - Guild Wars 2</h1>
-    <form method="POST">
-        <label for="profesion">Selecciona una profesión:</label>
-        <select name="profesion" id="profesion" required onchange="this.form.submit()">
-            <option value="">-- Selecciona una opción --</option>
-            {% for profesion in profesiones %}
-                <option value="{{ profesion }}" {% if profesion == request.form.profesion %}selected{% endif %}>
-                    {{ profesion }}
-                </option>
-            {% endfor %}
-        </select>
+    <div class="container mt-5">
+        <h1 class="text-center">Build Optimizer - Guild Wars 2</h1>
+        
+        <form method="POST" action="/">
+            <h3>Configura tus estadísticas</h3>
+            <div class="mb-3">
+                <label for="toughness" class="form-label">Toughness</label>
+                <input type="number" class="form-control" id="toughness" name="Toughness" value="0" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="critDamage" class="form-label">Crit Damage</label>
+                <input type="number" class="form-control" id="critDamage" name="CritDamage" value="0" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="power" class="form-label">Power</label>
+                <input type="number" class="form-control" id="power" name="Power" value="0" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="precision" class="form-label">Precision</label>
+                <input type="number" class="form-control" id="precision" name="Precision" value="0" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="conditionDamage" class="form-label">Condition Damage</label>
+                <input type="number" class="form-control" id="conditionDamage" name="ConditionDamage" value="0" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="Expertise" class="form-label">Expertise</label>
+                <input type="number" class="form-control" id="Expertise" name="Expertise" value="0" min="0">
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar Cálculo</button>
+        </form>
 
-        {% if especializaciones %}
-            <label for="especializacion">Selecciona una especialización:</label>
-            <select name="especializacion" id="especializacion" required>
-                <option value="">-- Selecciona una opción --</option>
-                {% for especializacion in especializaciones %}
-                    <option value="{{ especializacion.id }}">{{ especializacion.name }}</option>
-                {% endfor %}
-            </select>
-        {% endif %}
-
-        <button type="submit">Calcular Configuración</button>
-    </form>
-
-    {% if configuracion_optima %}
-        <h2>Resultado Óptimo</h2>
-        <p><strong>Especialización:</strong> {{ configuracion_optima.especializacion }}</p>
-        <p><strong>DPS Total:</strong> {{ configuracion_optima.dps }}</p>
-        <p><strong>Quickness Total:</strong> {{ configuracion_optima.quickness }}</p>
-        <p><strong>Alacrity Total:</strong> {{ configuracion_optima.alacrity }}</p>
-
-        <h3>Habilidades Óptimas</h3>
+        <!-- Resultados -->
+        <h1>Items seleccionados</h1>
         <ul>
-            {% for habilidad in configuracion_optima.habilidades_optimas %}
-                <li>
-                    {{ habilidad.name }} - DPS: {{ habilidad.dps }}, Quickness: {{ habilidad.quickness }}, Alacrity: {{ habilidad.alacrity }}
-                </li>
+            {% for item in configuracion_optima["items"] %}
+                <li>{{ item }}</li>
             {% endfor %}
         </ul>
+        
+        <p><strong>Utilidad total:</strong> 
+            {% if configuracion_optima and configuracion_optima.total_utility is not none %}
+                {{ configuracion_optima.total_utility }}
+            {% else %}
+                No calculada
+            {% endif %}
+        </p>
+    </div>
 
-        <h3>Equipamiento Óptimo</h3>
-        <p><strong>Arma:</strong> {{ configuracion_optima.equipamiento_optimo.arma }}</p>
-        <p><strong>Runas:</strong> {{ configuracion_optima.equipamiento_optimo.runas }}</p>
-    {% endif %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

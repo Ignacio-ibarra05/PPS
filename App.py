@@ -1,105 +1,59 @@
 from flask import Flask, render_template, request
+from main import calcular_configuracion_optima
 import requests
+import json
 
 app = Flask(__name__)
 
 API_BASE_URL = "https://api.guildwars2.com/v2"
 
-# Obtener datos desde la API
-def obtener_datos(endpoint):
-    response = requests.get(f"{API_BASE_URL}/{endpoint}")
-    if response.status_code == 200:
-        return response.json()
-    return []
+# Cargar el archivo itemstats_cache.json
+with open("itemstats_cache.json", "r", encoding="utf-8") as f:
+    itemstats_cache = json.load(f)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    profesiones = obtener_datos("professions")
-    especializaciones = []
     configuracion_optima = None
 
     if request.method == "POST":
-        profesion_id = request.form.get("profesion")
-        especializacion_id = request.form.get("especializacion")
+        # Obtener estadísticas desde el formulario
+        input_values = {
+            "Toughness": int(request.form.get("Toughness", 0)),
+            "CritDamage": int(request.form.get("CritDamage", 0)),
+            "Power": int(request.form.get("Power", 0)),
+            "Precision": int(request.form.get("Precision", 0)),
+            "ConditionDamage": int(request.form.get("ConditionDamage", 0)),
+            "Expertise": int(request.form.get("Expertise", 0)),
+        }
 
-        if profesion_id:
-            especializaciones = obtener_especializaciones(profesion_id)
+        print("Valores recibidos del formulario:", input_values)  # Debugging para verificar valores
 
-        if especializacion_id:
-            configuracion_optima = calcular_configuracion_optima(especializacion_id)
+        # Llamar a la función principal de main.py para calcular
+        configuracion_optima = calcular_configuracion_optima(input_values)
 
+        print("Resultado de configuracion_optima:", configuracion_optima)  # Debugging para verificar resultado
+
+        # Reemplazar los IDs de ítems con sus nombres del archivo itemstats_cache.json
+        if configuracion_optima and isinstance(configuracion_optima.get("items", []), list):
+            item_names = []
+            for item_id in configuracion_optima["items"]:
+                item_data = itemstats_cache.get(item_id)
+                if item_data and "name" in item_data:
+                    item_names.append(item_data["name"])
+                else:
+                    item_names.append(f"Unknown Item ({item_id})")
+            configuracion_optima["items"] = item_names
+        else:
+            configuracion_optima["items"] = []
+
+
+        print("Resultado de configuracion_optima:", configuracion_optima)
+        print("Tipo de items:", type(configuracion_optima["items"]))
+        
     return render_template(
         "index.html",
-        profesiones=profesiones,
-        especializaciones=especializaciones,
         configuracion_optima=configuracion_optima,
     )
-
-# Obtener especializaciones de una profesión
-def obtener_especializaciones(profesion_id):
-    profesion = obtener_datos(f"professions/{profesion_id}")
-    if not profesion:
-        return []
-
-    especializaciones = []
-    for spec_id in profesion.get("specializations", []):
-        especializacion = obtener_datos(f"specializations/{spec_id}")
-        if especializacion:
-            especializaciones.append({
-                "id": spec_id,
-                "name": especializacion["name"],
-                "description": especializacion.get("description", "Sin descripción"),
-            })
-
-    return especializaciones
-
-# Calcular la configuración óptima para una especialización
-def calcular_configuracion_optima(especializacion_id):
-    especializacion = obtener_datos(f"specializations/{especializacion_id}")
-    if not especializacion:
-        return None
-
-    dps_total, quickness_total, alacrity_total = 0, 0, 0
-    habilidades_optimas = []
-    equipamiento_optimo = {"arma": "Sin definir", "runas": "Sin definir"}
-
-    # Calcular contribuciones de los rasgos
-    for trait_id in especializacion.get("major_traits", []):
-        rasgo = obtener_datos(f"traits/{trait_id}")
-        if rasgo:
-            dps_total += rasgo.get("dps", 0)
-            quickness_total += rasgo.get("quickness", 0)
-            alacrity_total += rasgo.get("alacrity", 0)
-
-    # Determinar habilidades óptimas
-    for skill_id in especializacion.get("skills", []):
-        habilidad = obtener_datos(f"skills/{skill_id}")
-        if habilidad:
-            dps = sum(fact.get("value", 0) for fact in habilidad.get("facts", []) if fact.get("text") == "DPS")
-            quickness = sum(fact.get("value", 0) for fact in habilidad.get("facts", []) if fact.get("text") == "Quickness")
-            alacrity = sum(fact.get("value", 0) for fact in habilidad.get("facts", []) if fact.get("text") == "Alacrity")
-
-            habilidades_optimas.append({
-                "name": habilidad["name"],
-                "dps": dps,
-                "quickness": quickness,
-                "alacrity": alacrity,
-            })
-
-    # Elegir el mejor equipamiento basado en atributos
-    equipamiento_optimo = {
-        "arma": "Espada de Poder" if dps_total > 50 else "Báculo de Rapidez",
-        "runas": "Runas de la Rapidez" if quickness_total > alacrity_total else "Runas de la Precisión",
-    }
-
-    return {
-        "especializacion": especializacion["name"],
-        "dps": dps_total,
-        "quickness": quickness_total,
-        "alacrity": alacrity_total,
-        "habilidades_optimas": habilidades_optimas,
-        "equipamiento_optimo": equipamiento_optimo,
-    }
 
 if __name__ == "__main__":
     app.run(debug=True)
