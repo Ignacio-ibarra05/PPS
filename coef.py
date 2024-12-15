@@ -71,23 +71,23 @@ def getCoef(url,input_stat):
         match condition:
             case 'Burning': # 0.155 * Condition Damage + 131
                 dps1 = input_stat['condi_dmg'] * 0.155 + 131
-                dps2 = dps1 * input_stat['expertice_quemado']
+                dps2 = dps1 * input_stat['expertise_quemado']
 
             case 'Bleeding': # 0.06 * Condition Damage + 22
                 dps1 = input_stat['condi_dmg'] * 0.06 + 22
-                dps2 = dps1 * input_stat['expertice_sangrado']
+                dps2 = dps1 * input_stat['expertise_sangrado']
 
             case 'Poison': # 0.06 * Condition Damage + 33.5
                 dps1 = input_stat['condi_dmg'] * 0.06 + 33.5
-                dps2 = dps1 * input_stat['expertice_veneno']
+                dps2 = dps1 * input_stat['expertise_veneno']
 
             case 'Torment': # 0.09 * Condition Damage + 31.8
                 dps1 = input_stat['condi_dmg'] * 0.09 + 31.8
-                dps2 = dps1 * input_stat['expertice_tormento']
+                dps2 = dps1 * input_stat['expertise_tormento']
 
             case 'Confusion': # 0.05 * Condition Damage + 18.25
                 dps1 = input_stat['condi_dmg'] * 0.05 + 18.25
-                dps2 = dps1 * input_stat['expertice_confusion']
+                dps2 = dps1 * input_stat['expertise_confusion']
         coef_result[condition] = condition_data[condition]/dps2
 
     # Obtiene las entradas de buffs no relacionados con condiciones
@@ -135,12 +135,12 @@ input_stat = {
     'crit_chance': 0.6871,
     'crit_dmg': 1.5,
     'condi_dmg': 2924,
-    'expertice': 747,
-    'expertice_tormento': 1.798,
-    'expertice_sangrado': 1.848,
-    'expertice_quemado': 1.648,
-    'expertice_veneno': 1.648,
-    'expertice_confusion': 1.648
+    'expertise': 747,
+    'expertise_tormento': 1.798,
+    'expertise_sangrado': 1.848,
+    'expertise_quemado': 1.648,
+    'expertise_veneno': 1.648,
+    'expertise_confusion': 1.648
 }
 coef = getCoef('https://dps.report/LzVj-20231003-151324_golem',input_stat)
 
@@ -150,12 +150,12 @@ input_stat = {
     'crit_chance': 1,
     'crit_dmg': 1.7167,
     'condi_dmg': 2392,
-    'expertice': 747,
-    'expertice_tormento': 1.35,
-    'expertice_sangrado': 1.85,
-    'expertice_quemado': 1.35,
-    'expertice_veneno': 1.35,
-    'expertice_confusion': 1.35
+    'expertise': 747,
+    'expertise_tormento': 1.35,
+    'expertise_sangrado': 1.85,
+    'expertise_quemado': 1.35,
+    'expertise_veneno': 1.35,
+    'expertise_confusion': 1.35
 }
 coef = getCoef('https://dps.report/YeGx-20231205-223957_golem',input_stat)
 
@@ -165,12 +165,12 @@ input_stat_2 = {
     'crit_chance': 1,
     'crit_dmg': 1.7167,
     'condi_dmg': 2402,
-    'expertice': 747,
-    'expertice_tormento': 1.35,
-    'expertice_sangrado': 1.85,
-    'expertice_quemado': 1.35,
-    'expertice_veneno': 1.35,
-    'expertice_confusion': 1.35
+    'expertise': 747,
+    'expertise_tormento': 1.35,
+    'expertise_sangrado': 1.85,
+    'expertise_quemado': 1.35,
+    'expertise_veneno': 1.35,
+    'expertise_confusion': 1.35
 }
 
 print("\n")

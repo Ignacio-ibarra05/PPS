@@ -32,11 +32,11 @@ def calcular_dano(coef, stat):
     coef_torment = coef['Torment']
     coef_confusion = coef['Confusion']
     condi_stat = stat['condi_dmg']
-    exp_burning = stat['expertice_quemado']
-    exp_bleeding = stat['expertice_sangrado']
-    exp_poison = stat['expertice_veneno']
-    exp_torment = stat['expertice_tormento']
-    exp_confusion = stat['expertice_confusion']
+    exp_burning = stat['expertise_quemado']
+    exp_bleeding = stat['expertise_sangrado']
+    exp_poison = stat['expertise_veneno']
+    exp_torment = stat['expertise_tormento']
+    exp_confusion = stat['expertise_confusion']
 
     dano_condi = calcular_dano_condi(coef_burning, coef_bleeding, coef_poison, coef_torment, coef_confusion, condi_stat, exp_burning, exp_bleeding, exp_poison, exp_torment, exp_confusion, duracion)
 
