@@ -1,4 +1,3 @@
-import heapq
 import json
 
 def calcular_configuracion_optima(input_values):
@@ -38,7 +37,7 @@ def calcular_configuracion_optima(input_values):
             multiplier = attr["multiplier"]
             if attribute_name in input_values:
                 stat_val = input_values[attribute_name]
-                gain = stat_val * multiplier
+                gain = stat_val * (1.0 + multiplier)
                 cost = -gain  # costo negativo para maximizar ganancia
                 add_edge(stat_nodes[attribute_name], item_node, 1, cost)
 
@@ -46,39 +45,33 @@ def calcular_configuracion_optima(input_values):
         item_node = item_to_node[item_id]
         add_edge(item_node, W, 1, 0)
 
+    # Implementación de Bellman-Ford
+    def bellman_ford(s, t):
+        N = W + 1
+        dist = [float('inf')] * N
+        parent = [(-1, -1)] * N
+        dist[s] = 0
+
+        for _ in range(N - 1):
+            for u in range(N):
+                for i, (v, cap, cost, rev) in enumerate(adj[u]):
+                    if cap > 0 and dist[u] + cost < dist[v]:
+                        dist[v] = dist[u] + cost
+                        parent[v] = (u, i)
+
+        return dist, parent
+
     def min_cost_max_flow(s, t):
         flow = 0
         cost = 0
-        dist = [0] * (W + 1)
-        potential = [0] * (W + 1)
-        parent = [(0, 0)] * (W + 1)
 
         while flow < K:
-            for i in range(W + 1):
-                dist[i] = float("inf")
-            dist[s] = 0
-            parent = [(-1, -1)] * (W + 1)
-            pq = [(0, s)]
-
-            while pq:
-                d, u = heapq.heappop(pq)
-                if d > dist[u]:
-                    continue
-                for i, (v, cap, cst, rev) in enumerate(adj[u]):
-                    if cap > 0:
-                        ndist = d + cst + potential[u] - potential[v]
-                        if ndist < dist[v]:
-                            dist[v] = ndist
-                            parent[v] = (u, i)
-                            heapq.heappush(pq, (ndist, v))
+            dist, parent = bellman_ford(s, t)
 
             if dist[t] == float("inf"):
-                break
+                break  # No hay más caminos aumentantes
 
-            for i in range(W + 1):
-                if dist[i] < float("inf"):
-                    potential[i] += dist[i]
-
+            # Aumentar flujo en el camino encontrado
             add_flow = K - flow
             v = t
             while v != s:
@@ -118,13 +111,18 @@ def calcular_configuracion_optima(input_values):
         "items": chosen_items,
         "total_utility": -min_cost,
     }
+'''
+#### Ejemplo de entrada
+input_values = {
+    "Toughness": 8,
+    "CritDamage": 5,
+    "Expertise": 15,
+    "Power": 6,
+    "Precision": 1,
+    "ConditionDamage": 3
+}
 
-##def calcular_configuracion_optima(input_values):
-    # Ejemplo de datos de prueba: reemplázalos con la lógica real
-    chosen_items = ["item_1_id", "item_2_id", "item_3_id"]  # Asegúrate de que esto es una lista
-    total_utility = 100.0  # Ejemplo de utilidad total calculada
-
-    return {
-        "items": chosen_items,  # Lista de ítems seleccionados
-        "total_utility": total_utility,  # Utilidad total calculada
-    }
+resultado = calcular_configuracion_optima(input_values)
+print("Ítems seleccionados:", resultado["items"])
+print("Utilidad total:", resultado["total_utility"])
+'''
