@@ -18,7 +18,7 @@ def index():
     if request.method == "POST":
         # Obtener estadísticas desde el formulario
         input_values = {
-            "Toughness": int(request.form.get("Toughness", 0)),
+            
             "CritDamage": int(request.form.get("CritDamage", 0)),
             "Power": int(request.form.get("Power", 0)),
             "Precision": int(request.form.get("Precision", 0)),
