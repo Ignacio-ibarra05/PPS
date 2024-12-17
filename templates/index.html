@@ -13,24 +13,52 @@
         <form method="POST" action="/">
             <h3>Configura tus estadísticas</h3>
             <div class="mb-3">
-                <label for="critDamage" class="form-label">Crit Damage</label>
-                <input type="number" class="form-control" id="critDamage" name="CritDamage" value="0" min="0">
-            </div>
-            <div class="mb-3">
                 <label for="power" class="form-label">Power</label>
-                <input type="number" class="form-control" id="power" name="Power" value="0" min="0">
+                <input type="number" class="form-control" id="power" name="power" placeholder="0" min="0">
             </div>
             <div class="mb-3">
                 <label for="precision" class="form-label">Precision</label>
-                <input type="number" class="form-control" id="precision" name="Precision" value="0" min="0">
+                <input type="number" class="form-control" id="precision" name="precision" placeholder="0" min="0">
             </div>
             <div class="mb-3">
-                <label for="conditionDamage" class="form-label">Condition Damage</label>
-                <input type="number" class="form-control" id="conditionDamage" name="ConditionDamage" value="0" min="0">
+                <label for="crit_chance" class="form-label">Crit Chance</label>
+                <input type="number" class="form-control" id="crit_chance" name="crit_chance" placeholder="0" min="0">
             </div>
             <div class="mb-3">
-                <label for="ConditionDuration" class="form-label">ConditionDuration</label>
-                <input type="number" class="form-control" id="ConditionDuration" name="ConditionDuration" value="0" min="0">
+                <label for="crit_dmg" class="form-label">Crit Damage</label>
+                <input type="number" class="form-control" id="crit_dmg" name="crit_dmg" placeholder="0" min="0" step="0.001">
+            </div>
+            <div class="mb-3">
+                <label for="condi_dmg" class="form-label">Condition Damage</label>
+                <input type="number" class="form-control" id="condi_dmg" name="condi_dmg" placeholder="0" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="Expertise" class="form-label">Expertise</label>
+                <input type="number" class="form-control" id="Expertise" name="Expertise" placeholder="0" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="expertise_tormento" class="form-label">Expertise Tormento</label>
+                <input type="number" class="form-control" id="expertise_tormento" name="expertise_tormento" placeholder="0" min="0" step="0.01">
+            </div>
+            <div class="mb-3">
+                <label for="expertise_sangrado" class="form-label">Expertise Sangrado</label>
+                <input type="number" class="form-control" id="expertise_sangrado" name="expertise_sangrado" placeholder="0" min="0" step="0.01">
+            </div>
+            <div class="mb-3">
+                <label for="expertise_quemado" class="form-label">Expertise Quemado</label>
+                <input type="number" class="form-control" id="expertise_quemado" name="expertise_quemado" placeholder="0" min="0" step="0.01">
+            </div>
+            <div class="mb-3">
+                <label for="expertise_veneno" class="form-label">Expertise Veneno</label>
+                <input type="number" class="form-control" id="expertise_veneno" name="expertise_veneno" placeholder="0" min="0" step="0.01">
+            </div>
+            <div class="mb-3">
+                <label for="expertise_confusion" class="form-label">Expertise Confusion</label>
+                <input type="number" class="form-control" id="expertise_confusion" name="expertise_confusion" placeholder="0" min="0" step="0.01">
+            </div>
+            <div class="mb-3">
+                <label for="url" class="form-label">URL</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="Ingrese su url">
             </div>
             <button type="submit" class="btn btn-primary">Iniciar Cálculo</button>
         </form>
