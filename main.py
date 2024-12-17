@@ -12,13 +12,16 @@ def calcular_configuracion_optima(input_values):
     # Queremos exactamente 6 ítems
     K = 6
 
-    # Crearemos nodos:
+    # Nodos:
     F = 0  # Nodo fuente
     stat_nodes = {stat: i for i, stat in enumerate(stats_of_interest, start=1)}
 
-    first_item_node = len(stats_of_interest) + 1
+    first_item_stat_sum_node = len(stats_of_interest) + 1
+    item_sum_nodes = {item_id: first_item_stat_sum_node + i for i, item_id in enumerate(items)}
+
+    first_item_node = first_item_stat_sum_node + len(items)
     item_to_node = {item_id: first_item_node + i for i, item_id in enumerate(items)}
-    W = first_item_node + num_items  # Nodo sumidero
+    W = first_item_node + len(items)  # Nodo sumidero
 
     adj = [[] for _ in range(W + 1)]
 
@@ -26,27 +29,36 @@ def calcular_configuracion_optima(input_values):
         adj[u].append([v, cap, cost, len(adj[v])])
         adj[v].append([u, 0, -cost, len(adj[u]) - 1])
 
-    # Construir el grafo
+    # Fuente -> Stats con capacidad K y costo 0
     for stat in stats_of_interest:
         add_edge(F, stat_nodes[stat], K, 0)
 
+    # Stats -> Item Sum Nodes (capa intermedia)
     for item_id, data in itemstats_cache.items():
-        item_node = item_to_node[item_id]
+        sum_node = item_sum_nodes[item_id]
         attributes = data.get("attributes", [])
+        total_gain = 0
         for attr in attributes:
             attribute_name = attr["attribute"]
             multiplier = attr["multiplier"]
             if attribute_name in input_values:
                 stat_val = input_values[attribute_name]
-                gain = stat_val * (1.0 + multiplier)
-                cost = -gain  # costo negativo para maximizar ganancia
-                add_edge(stat_nodes[attribute_name], item_node, 1, cost)
+                total_gain += stat_val * (1.0 + multiplier)
+        # Sumar beneficios de todos los atributos y agregar un único costo negativo
+        cost = -total_gain
+        add_edge(sum_node, item_to_node[item_id], 1, cost)
 
+    # Item Sum Nodes -> Ítems individuales
+    for item_id in items:
+        sum_node = item_sum_nodes[item_id]
+        add_edge(stat_nodes.get("Power", 1), sum_node, 1, 0)  # Conecta capa intermedia acumulativa
+
+    # Ítems individuales -> Sumidero
     for item_id in items:
         item_node = item_to_node[item_id]
         add_edge(item_node, W, 1, 0)
 
-    # Implementación de Bellman-Ford
+    # Bellman-Ford
     def bellman_ford(s, t):
         N = W + 1
         dist = [float('inf')] * N
@@ -62,17 +74,16 @@ def calcular_configuracion_optima(input_values):
 
         return dist, parent
 
+    # Min-Cost Max-Flow
     def min_cost_max_flow(s, t):
         flow = 0
         cost = 0
 
         while flow < K:
             dist, parent = bellman_ford(s, t)
-
             if dist[t] == float("inf"):
-                break  # No hay más caminos aumentantes
+                break
 
-            # Aumentar flujo en el camino encontrado
             add_flow = K - flow
             v = t
             while v != s:
@@ -95,23 +106,23 @@ def calcular_configuracion_optima(input_values):
 
         return flow, cost
 
+    # Ejecutar flujo máximo con costo mínimo
     max_flow, min_cost = min_cost_max_flow(F, W)
 
+    # Determinar ítems seleccionados
     chosen_items = []
     for item_id in items:
         item_node = item_to_node[item_id]
-        for i, (v, cap, cst, rev) in enumerate(adj[item_node]):
-            if v == W:
-                initial_cap = 1
-                flow_used = initial_cap - cap
-                if flow_used > 0:
-                    chosen_items.append(item_id)
+        for v, cap, _, _ in adj[item_node]:
+            if v == W and cap == 0:  # Capacidad agotada = flujo utilizado
+                chosen_items.append(item_id)
                 break
 
     return {
         "items": chosen_items,
         "total_utility": -min_cost,
     }
+
 '''
 #### Ejemplo de entrada
 input_values = {
