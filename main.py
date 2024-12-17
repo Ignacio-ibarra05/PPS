@@ -1,4 +1,5 @@
 import json
+from tester import *
 
 def calcular_configuracion_optima(input_values):
     with open("itemstats_cache.json", "r", encoding="utf-8") as f:

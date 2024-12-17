@@ -17,5 +17,5 @@ Para usar este codigo, primero se debe ejecutar los siguientes comandos:
 ```
 Con todo instalado, procedemos a hacer funcionar el codigo con el comando:
 ```bash
-python app.py
+python App.py
 ```
