@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from main import calcular_configuracion_optima
+from pesos import pesos
 import requests
 import json
 
@@ -18,22 +19,31 @@ def index():
     if request.method == "POST":
         # Obtener estadísticas desde el formulario
         input_values = {
-            
-            "CritDamage": int(request.form.get("CritDamage", 0)),
-            "Power": int(request.form.get("Power", 0)),
-            "Precision": int(request.form.get("Precision", 0)),
-            "ConditionDamage": int(request.form.get("ConditionDamage", 0)),
+            "power": int(request.form.get("power", 0)),
+            "precision": int(request.form.get("precision", 0)),
+            "crit_chance": int(request.form.get("crit_chance", 0)),
+            "crit_dmg": float(request.form.get("crit_dmg", 0)),
+            "condi_dmg": int(request.form.get("condi_dmg", 0)),
             "Expertise": int(request.form.get("Expertise", 0)),
+            "expertise_tormento": float(request.form.get("expertise_tormento", 0)),
+            "expertise_sangrado": float(request.form.get("expertise_sangrado", 0)),
+            "expertise_quemado": float(request.form.get("expertise_quemado", 0)),
+            "expertise_veneno": float(request.form.get("expertise_veneno", 0)),
+            "expertise_confusion": float(request.form.get("expertise_confusion", 0)),
         }
+        url = request.form.get("url", 0)
 
         print("Valores recibidos del formulario:", input_values)  # Debugging para verificar valores
 
         # Llamar a la función principal de main.py para calcular
+        """
         configuracion_optima = calcular_configuracion_optima(input_values)
+        configuracion_optima = pesos(input_values, url)
 
         print("Resultado de configuracion_optima:", configuracion_optima)  # Debugging para verificar resultado
 
         # Reemplazar los IDs de ítems con sus nombres del archivo itemstats_cache.json
+        
         if configuracion_optima and isinstance(configuracion_optima.get("items", []), list):
             item_names = []
             for item_id in configuracion_optima["items"]:
@@ -49,7 +59,8 @@ def index():
 
         print("Resultado de configuracion_optima:", configuracion_optima)
         print("Tipo de items:", type(configuracion_optima["items"]))
-        
+
+        """
     return render_template(
         "index.html",
         configuracion_optima=configuracion_optima,
