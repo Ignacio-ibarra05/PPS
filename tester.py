@@ -5,7 +5,7 @@ def calcular_dano_fisico(coef_habilidad, power_stat, prob_crit, dano_crit, armad
     dano_normal = 1000 * coef_habilidad * power_stat / armadura_objetivo
     dano_critico = dano_normal * dano_crit
     dano = dano_normal * (1 - crit) + dano_critico * crit
-    return dano * duracion
+    return dano
 
 def calcular_dano_condi(coef_burning, coef_bleeding, coef_poison, coef_torment, coef_confusion, condi_stat, exp_burning, exp_bleeding, exp_poison, exp_torment, exp_confusion, duracion):
     dano = 0
@@ -14,7 +14,7 @@ def calcular_dano_condi(coef_burning, coef_bleeding, coef_poison, coef_torment, 
     dano += (condi_stat * 0.06 + 33.5) * exp_poison * coef_poison
     dano += (condi_stat * 0.09 + 31.8) * exp_torment * coef_torment
     dano += (condi_stat * 0.05 + 18.25) * exp_confusion * coef_confusion
-    return dano * duracion
+    return dano
 
 def calcular_dano(coef, stat):
     coef_habilidad = coef['Power']

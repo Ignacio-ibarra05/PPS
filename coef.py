@@ -145,32 +145,32 @@ input_stat = {
 coef = getCoef('https://dps.report/LzVj-20231003-151324_golem',input_stat)
 
 input_stat = {
-    'power': 2820,
+    'power': 2756,
     'precision': 2155,
     'crit_chance': 1,
-    'crit_dmg': 1.7167,
-    'condi_dmg': 2392,
-    'expertise': 747,
-    'expertise_tormento': 1.35,
-    'expertise_sangrado': 1.85,
-    'expertise_quemado': 1.35,
-    'expertise_veneno': 1.35,
-    'expertise_confusion': 1.35
+    'crit_dmg': 1.603,
+    'condi_dmg': 2594,
+    'expertise': 225,
+    'expertise_tormento': 1.15,
+    'expertise_sangrado': 1.65,
+    'expertise_quemado': 1.15,
+    'expertise_veneno': 1.15,
+    'expertise_confusion': 1.15
 }
-coef = getCoef('https://dps.report/YeGx-20231205-223957_golem',input_stat)
+coef = getCoef('https://dps.report/6qrQ-20241215-094842_golem',input_stat)
 
 input_stat_2 = {
-    'power': 2820,
-    'precision': 2155,
+    'power': 3014,
+    'precision': 2168,
     'crit_chance': 1,
-    'crit_dmg': 1.7167,
-    'condi_dmg': 2402,
-    'expertise': 747,
-    'expertise_tormento': 1.35,
-    'expertise_sangrado': 1.85,
-    'expertise_quemado': 1.35,
-    'expertise_veneno': 1.35,
-    'expertise_confusion': 1.35
+    'crit_dmg': 2.243,
+    'condi_dmg': 1371,
+    'expertise': 225,
+    'expertise_tormento': 1.15,
+    'expertise_sangrado': 1.65,
+    'expertise_quemado': 1.15,
+    'expertise_veneno': 1.15,
+    'expertise_confusion': 1.15
 }
 
 print("\n")
@@ -184,3 +184,11 @@ print(f'Entrada de estadisticas 2: { input_stat_2 }')
 print("\n")
 print(f'Daño para la entrada 2: {calcular_dano(coef, input_stat_2)}')
 print("\n")
+
+for i in range(10):
+    d = calcular_dano(coef, input_stat_2)
+    input_stat_2['power'] += 0.01
+    print(f'Daño para la entrada 2: {calcular_dano(coef, input_stat_2)}')
+    print(f'dif: {calcular_dano(coef, input_stat_2)-d}')
+    print("\n")
+

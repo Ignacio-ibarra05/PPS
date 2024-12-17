@@ -1,0 +1,2 @@
+def algoritmo():
+    return 'resultado'
