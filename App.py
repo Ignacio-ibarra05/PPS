@@ -57,7 +57,7 @@ def index():
             configuracion_optima["items"] = item_names
         else:
             configuracion_optima["items"] = []
-            
+
         c = getCoef(url, input_values)
         p = pesos(input_values, url)
         print("Resultado de configuracion_optima:", configuracion_optima)
