@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from main import calcular_configuracion_optima
-from pesos import pesos
+from pesos import *
+from coef import *
 import requests
 import json
 
@@ -15,13 +16,15 @@ with open("itemstats_cache.json", "r", encoding="utf-8") as f:
 @app.route("/", methods=["GET", "POST"])
 def index():
     configuracion_optima = None
+    c = None
+    p = None
 
     if request.method == "POST":
         # Obtener estadísticas desde el formulario
         input_values = {
             "power": int(request.form.get("power", 0)),
             "precision": int(request.form.get("precision", 0)),
-            "crit_chance": int(request.form.get("crit_chance", 0)),
+            "crit_chance": float(request.form.get("crit_chance", 0)),
             "crit_dmg": float(request.form.get("crit_dmg", 0)),
             "condi_dmg": int(request.form.get("condi_dmg", 0)),
             "Expertise": int(request.form.get("Expertise", 0)),
@@ -31,39 +34,42 @@ def index():
             "expertise_veneno": float(request.form.get("expertise_veneno", 0)),
             "expertise_confusion": float(request.form.get("expertise_confusion", 0)),
         }
-        url = request.form.get("url", 0)
+        url = request.form.get("url", '')
 
-        print("Valores recibidos del formulario:", input_values)  # Debugging para verificar valores
+        print("Valores recibidos del formulario:", input_values, url)  # Debugging para verificar valores
 
         # Llamar a la función principal de main.py para calcular
-        """
-        configuracion_optima = calcular_configuracion_optima(input_values)
-        configuracion_optima = pesos(input_values, url)
+        configuracion_optima = calcular_configuracion_optima(input_values,url)
+
 
         print("Resultado de configuracion_optima:", configuracion_optima)  # Debugging para verificar resultado
 
         # Reemplazar los IDs de ítems con sus nombres del archivo itemstats_cache.json
         
-        if configuracion_optima and isinstance(configuracion_optima.get("items", []), list):
+        if configuracion_optima and isinstance(configuracion_optima.get("items", {}), dict):
             item_names = []
-            for item_id in configuracion_optima["items"]:
-                item_data = itemstats_cache.get(item_id)
-                if item_data and "name" in item_data:
-                    item_names.append(item_data["name"])
-                else:
-                    item_names.append(f"Unknown Item ({item_id})")
+            for item_name, item_data in configuracion_optima["items"].items():
+                # Usamos el siguiente valor como ejemplo para representar cada item
+                item_value = round(next(iter(item_data.values())), 1)  # Esto obtiene el valor dentro del subdiccionario
+                item_index = next(iter(item_data.keys()))   # Obtiene la clave de s[n]
+                item_names.append(f"{item_name} ({item_index}): {item_value}")
+            
             configuracion_optima["items"] = item_names
         else:
             configuracion_optima["items"] = []
-
-
+            
+        c = getCoef(url, input_values)
+        p = pesos(input_values, url)
         print("Resultado de configuracion_optima:", configuracion_optima)
         print("Tipo de items:", type(configuracion_optima["items"]))
+        print(c)
 
-        """
+
     return render_template(
         "index.html",
         configuracion_optima=configuracion_optima,
+        coef = c,
+        pesos = p
     )
 
 if __name__ == "__main__":

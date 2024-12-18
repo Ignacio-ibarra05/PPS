@@ -22,7 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="crit_chance" class="form-label">Crit Chance</label>
-                <input type="number" class="form-control" id="crit_chance" name="crit_chance" placeholder="0" min="0">
+                <input type="number" class="form-control" id="crit_chance" name="crit_chance" placeholder="0" min="0" step="0.0001">
             </div>
             <div class="mb-3">
                 <label for="crit_dmg" class="form-label">Crit Damage</label>
@@ -38,23 +38,23 @@
             </div>
             <div class="mb-3">
                 <label for="expertise_tormento" class="form-label">Expertise Tormento</label>
-                <input type="number" class="form-control" id="expertise_tormento" name="expertise_tormento" placeholder="0" min="0" step="0.01">
+                <input type="number" class="form-control" id="expertise_tormento" name="expertise_tormento" placeholder="0" min="0" step="0.001">
             </div>
             <div class="mb-3">
                 <label for="expertise_sangrado" class="form-label">Expertise Sangrado</label>
-                <input type="number" class="form-control" id="expertise_sangrado" name="expertise_sangrado" placeholder="0" min="0" step="0.01">
+                <input type="number" class="form-control" id="expertise_sangrado" name="expertise_sangrado" placeholder="0" min="0" step="0.001">
             </div>
             <div class="mb-3">
                 <label for="expertise_quemado" class="form-label">Expertise Quemado</label>
-                <input type="number" class="form-control" id="expertise_quemado" name="expertise_quemado" placeholder="0" min="0" step="0.01">
+                <input type="number" class="form-control" id="expertise_quemado" name="expertise_quemado" placeholder="0" min="0" step="0.001">
             </div>
             <div class="mb-3">
                 <label for="expertise_veneno" class="form-label">Expertise Veneno</label>
-                <input type="number" class="form-control" id="expertise_veneno" name="expertise_veneno" placeholder="0" min="0" step="0.01">
+                <input type="number" class="form-control" id="expertise_veneno" name="expertise_veneno" placeholder="0" min="0" step="0.001">
             </div>
             <div class="mb-3">
                 <label for="expertise_confusion" class="form-label">Expertise Confusion</label>
-                <input type="number" class="form-control" id="expertise_confusion" name="expertise_confusion" placeholder="0" min="0" step="0.01">
+                <input type="number" class="form-control" id="expertise_confusion" name="expertise_confusion" placeholder="0" min="0" step="0.001">
             </div>
             <div class="mb-3">
                 <label for="url" class="form-label">URL</label>
@@ -64,6 +64,28 @@
         </form>
 
         <!-- Resultados -->
+        <h1>Coeficientes</h1>
+        {% if coef is not none %}
+        <ul>
+            {% for key, value in coef.items() %}
+                <li>{{ key }}: {{ "%.2f"|format(value) }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            No calculada
+        {% endif %}
+
+        <h1>Pesos</h1>
+        {% if pesos is not none %}
+        <ul>
+            {% for key, value in pesos.items() %}
+                <li>{{ key }}: {{ "%.2f"|format(value) }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            No calculada
+        {% endif %}
+
         <h1>Items seleccionados</h1>
         <ul>
             {% for item in configuracion_optima["items"] %}

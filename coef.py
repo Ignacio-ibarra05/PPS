@@ -28,6 +28,7 @@ condition_ids = {
 }
 
 def getCoef(url,input_stat):
+
     coef_result = {
         'Power': 0,
         'Burning': 0,
@@ -129,66 +130,66 @@ def getCoef(url,input_stat):
 
 
 
-input_stat = {
-    'power': 3103,
-    'precision': 1813,
-    'crit_chance': 0.6871,
-    'crit_dmg': 1.5,
-    'condi_dmg': 2924,
-    'expertise': 747,
-    'expertise_tormento': 1.798,
-    'expertise_sangrado': 1.848,
-    'expertise_quemado': 1.648,
-    'expertise_veneno': 1.648,
-    'expertise_confusion': 1.648
-}
-coef = getCoef('https://dps.report/LzVj-20231003-151324_golem',input_stat)
+# input_stat = {
+#     'power': 3103,
+#     'precision': 1813,
+#     'crit_chance': 0.6871,
+#     'crit_dmg': 1.5,
+#     'condi_dmg': 2924,
+#     'expertise': 747,
+#     'expertise_tormento': 1.798,
+#     'expertise_sangrado': 1.848,
+#     'expertise_quemado': 1.648,
+#     'expertise_veneno': 1.648,
+#     'expertise_confusion': 1.648
+# }
+# coef = getCoef('https://dps.report/LzVj-20231003-151324_golem',input_stat)
 
-input_stat = {
-    'power': 2756,
-    'precision': 2155,
-    'crit_chance': 1,
-    'crit_dmg': 1.603,
-    'condi_dmg': 2594,
-    'expertise': 225,
-    'expertise_tormento': 1.15,
-    'expertise_sangrado': 1.65,
-    'expertise_quemado': 1.15,
-    'expertise_veneno': 1.15,
-    'expertise_confusion': 1.15
-}
-coef = getCoef('https://dps.report/6qrQ-20241215-094842_golem',input_stat)
+# input_stat = {
+#     'power': 2756,
+#     'precision': 2155,
+#     'crit_chance': 1,
+#     'crit_dmg': 1.603,
+#     'condi_dmg': 2594,
+#     'expertise': 225,
+#     'expertise_tormento': 1.15,
+#     'expertise_sangrado': 1.65,
+#     'expertise_quemado': 1.15,
+#     'expertise_veneno': 1.15,
+#     'expertise_confusion': 1.15
+# }
+# coef = getCoef('https://dps.report/6qrQ-20241215-094842_golem',input_stat)
 
-input_stat_2 = {
-    'power': 3014,
-    'precision': 2168,
-    'crit_chance': 1,
-    'crit_dmg': 2.243,
-    'condi_dmg': 1371,
-    'expertise': 225,
-    'expertise_tormento': 1.15,
-    'expertise_sangrado': 1.65,
-    'expertise_quemado': 1.15,
-    'expertise_veneno': 1.15,
-    'expertise_confusion': 1.15
-}
+# input_stat_2 = {
+#     'power': 3014,
+#     'precision': 2168,
+#     'crit_chance': 1,
+#     'crit_dmg': 2.243,
+#     'condi_dmg': 1371,
+#     'expertise': 225,
+#     'expertise_tormento': 1.15,
+#     'expertise_sangrado': 1.65,
+#     'expertise_quemado': 1.15,
+#     'expertise_veneno': 1.15,
+#     'expertise_confusion': 1.15
+# }
 
-print("\n")
-print(f'Entrada de estadisticas 1: { input_stat }')
-print("\n")
-print(f'Coeficientes obtenidos: { coef }')
-print("\n")
-print(f'Daño para la entrada 1: {calcular_dano(coef, input_stat)}')
-print("\n")
-print(f'Entrada de estadisticas 2: { input_stat_2 }')
-print("\n")
-print(f'Daño para la entrada 2: {calcular_dano(coef, input_stat_2)}')
-print("\n")
+# print("\n")
+# print(f'Entrada de estadisticas 1: { input_stat }')
+# print("\n")
+# print(f'Coeficientes obtenidos: { coef }')
+# print("\n")
+# print(f'Daño para la entrada 1: {calcular_dano(coef, input_stat)}')
+# print("\n")
+# print(f'Entrada de estadisticas 2: { input_stat_2 }')
+# print("\n")
+# print(f'Daño para la entrada 2: {calcular_dano(coef, input_stat_2)}')
+# print("\n")
 
-for i in range(10):
-    d = calcular_dano(coef, input_stat_2)
-    input_stat_2['power'] += 0.01
-    print(f'Daño para la entrada 2: {calcular_dano(coef, input_stat_2)}')
-    print(f'dif: {calcular_dano(coef, input_stat_2)-d}')
-    print("\n")
+# for i in range(10):
+#     d = calcular_dano(coef, input_stat_2)
+#     input_stat_2['power'] += 0.01
+#     print(f'Daño para la entrada 2: {calcular_dano(coef, input_stat_2)}')
+#     print(f'dif: {calcular_dano(coef, input_stat_2)-d}')
+#     print("\n")
 

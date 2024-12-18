@@ -1,7 +1,10 @@
 import json
 from tester import *
+from pesos import *
 
-def calcular_configuracion_optima(input_values):
+def calcular_configuracion_optima(input_values, url):
+
+    stat_weights = pesos(input_values, url)
     with open("itemstats_cache.json", "r", encoding="utf-8") as f:
         itemstats_cache = json.load(f)
 
@@ -41,9 +44,9 @@ def calcular_configuracion_optima(input_values):
         for attr in attributes:
             attribute_name = attr["attribute"]
             multiplier = attr["multiplier"]
-            if attribute_name in input_values:
-                stat_val = input_values[attribute_name]
-                total_gain += stat_val * (1.0 + multiplier)
+            weight = stat_weights.get(attribute_name, 0)
+            if attribute_name in stat_weights:
+                total_gain += multiplier * weight
         # Sumar beneficios de todos los atributos y agregar un único costo negativo
         cost = -total_gain
         add_edge(sum_node, item_to_node[item_id], 1, cost)
@@ -109,6 +112,7 @@ def calcular_configuracion_optima(input_values):
     # Ejecutar flujo máximo con costo mínimo
     max_flow, min_cost = min_cost_max_flow(F, W)
 
+    item_utility = {}
     # Determinar ítems seleccionados
     chosen_items = []
     for item_id in items:
@@ -116,25 +120,54 @@ def calcular_configuracion_optima(input_values):
         for v, cap, _, _ in adj[item_node]:
             if v == W and cap == 0:  # Capacidad agotada = flujo utilizado
                 chosen_items.append(item_id)
+                attributes = itemstats_cache[item_id]['attributes']
+                item_utility[item_id] = 0
+                for attr in attributes:
+                    attribute_name = attr["attribute"]
+                    multiplier = attr["multiplier"]
+                    weight = stat_weights.get(attribute_name, 0)
+                    item_utility[item_id] += multiplier * weight
                 break
+    dmg = []
+    s = []
+
+    for key in sorted(item_utility, key=lambda k: item_utility[k], reverse=True):
+        dmg.append(item_utility[key])
+        s.append(itemstats_cache[key]['name'])
+
+    item_f = {
+        'Helm' : {s[2] : dmg[2]*179.256},
+        'Shoulders': {s[3] :dmg[3]*134.442},
+        'Coat': {s[0] :dmg[0]*403.326},
+        'Gloves': {s[4] :dmg[4]*134.442},
+        'Leggings': {s[1] :dmg[1]*268.884},
+        'Boots': {s[5] :dmg[5]*134.442},
+    }
+    
 
     return {
-        "items": chosen_items,
-        "total_utility": -min_cost,
+        "items": item_f,
+        "total_utility": round(sum(next(iter(val.values())) for val in item_f.values()),1),
     }
 
-'''
-#### Ejemplo de entrada
-input_values = {
-    "Toughness": 8,
-    "CritDamage": 5,
-    "Expertise": 15,
-    "Power": 6,
-    "Precision": 1,
-    "ConditionDamage": 3
-}
 
-resultado = calcular_configuracion_optima(input_values)
-print("Ítems seleccionados:", resultado["items"])
-print("Utilidad total:", resultado["total_utility"])
-'''
+# #### Ejemplo de entrada
+# input_stat = {
+#     'power': 3103,
+#     'precision': 1813,
+#     'crit_chance': 0.6871,
+#     'crit_dmg': 1.5,
+#     'condi_dmg': 2924,
+#     'expertise': 747,
+#     'expertise_tormento': 1.798,
+#     'expertise_sangrado': 1.848,
+#     'expertise_quemado': 1.648,
+#     'expertise_veneno': 1.648,
+#     'expertise_confusion': 1.648
+# }
+
+# url = 'https://dps.report/6qrQ-20241215-094842_golem'
+
+# resultado = calcular_configuracion_optima(input_stat, url)
+# print("Ítems seleccionados:", resultado["items"])
+# print("Utilidad total:", resultado["total_utility"])
